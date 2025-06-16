@@ -144,14 +144,17 @@ export default function Home() {
     </div>
 </div>
 
-<div className="min-h-screen min-w-screen grid items-center justify-center lg:hidden xl:hidden absolute top-0 left-0 z-10 ">
+{/* <div className="min-h-screen min-w-screen grid items-center justify-center lg:hidden xl:hidden absolute top-0 left-0 z-10 ">
   <Image
     src="/logo.png"
       alt="MR Intl Logo"
     width={222}
     height={100}
   />
-</div>
+</div> */}
+
+
+{/* About Section */}
 <div className={isAbout ? ' min-h-screen min-w-screen absolute top-0 left-0 z-10 bg-amber-700 font-[family-name:var(--font-bodoni-moda)]' : 'hidden'}>
   <div className="min-h-screen justify-center items-center grid content-center ">
     <a className="absolute top-0 right-0 z-10" onClick={toggleAbout} href="#">
