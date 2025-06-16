@@ -121,7 +121,7 @@ export default function Home() {
     //   </footer>
     // </div>
 <div>
-    <div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 min-h-screen  font-[family-name:var(--font-bodoni-moda)]">
+    <div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 min-h-screen xl:hidden lg:hidden font-[family-name:var(--font-bodoni-moda)]">
     <div className="justify-center items-center grid abt">
       <p className="p-2 text-white boxline" style={{backgroundColor:"var(--navy)"}}>Brands</p>
     </div>
@@ -141,6 +141,30 @@ export default function Home() {
     </div>
     <div className="justify-center items-center grid serv" onClick={toggleAbout}>
       <p className=" p-2 text-white boxline" style={{backgroundColor:"var(--navy)"}}>About Us</p>
+    </div>
+</div>
+
+
+<div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 min-h-screen sm:hidden font-[family-name:var(--font-bodoni-moda)]">
+    <div className="justify-center items-center grid serv" onClick={toggleAbout}>
+      <p className=" p-2 text-white boxline" style={{backgroundColor:"var(--navy)"}}>About Us</p>
+    </div>
+    <div className="justify-center items-center grid abt">
+      <p className="p-2 text-white boxline" style={{backgroundColor:"var(--navy)"}}>Brands</p>
+    </div>
+    <div className="justify-center items-center grid brand">
+      <p className="p-2 text-white boxline" style={{backgroundColor:"var(--navy)"}}>Products</p>
+    </div>
+    <div className="justify-center items-center grid relative videocontainer" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+    <video
+        ref={videoRef}
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover"
+        src="/globe.mp4"
+      />
+      <p className="p-2 text-white boxline z-10" style={{backgroundColor:"var(--navy)"}}>Services</p>
     </div>
 </div>
 
