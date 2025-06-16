@@ -136,7 +136,7 @@ export default function Home() {
         muted
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover"
-        src="/globe.mp4"
+        src="/runwayglobe.mp4"
       />
       <p className="p-2 text-white boxline z-10" style={{backgroundColor:"var(--navy)"}}>Services</p>
     </div>
@@ -148,7 +148,7 @@ export default function Home() {
 </div>
 
 
-<div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 min-h-screen sm:hidden font-[family-name:var(--font-bodoni-moda)]">
+<div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 min-h-screen font-[family-name:var(--font-bodoni-moda)]">
     <div className="justify-center items-center grid serv" >
       <a href="#" onClick={toggleAbout}>
       <p className=" p-2 text-white boxline" style={{backgroundColor:"var(--navy)"}}>About Us</p>
@@ -167,7 +167,8 @@ export default function Home() {
         muted
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover"
-        src="/globe.mp4"
+        src="/runwayglobe.mp4"
+        style={{objectPosition:'-810px'}}
       />
       <p className="p-2 text-white boxline z-10" style={{backgroundColor:"var(--navy)"}}>Services</p>
     </div>
