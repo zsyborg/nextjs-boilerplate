@@ -53,7 +53,7 @@ const SvgGsap = () => {
     })
 
     logoOutro.eventCallback('onComplete', () => {
-        backoutro.play();
+        // backoutro.play();
     })
 
     logoTimeline.to('.logo',{

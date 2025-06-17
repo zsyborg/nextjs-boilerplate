@@ -70,6 +70,10 @@ body {
   outline-offset: 8px;
 }
 
+.logo{
+  margin-top: -150px;
+}
+
 .video-container {
   position: relative;
   width: 100%;
