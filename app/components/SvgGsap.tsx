@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
+import Image from 'next/image';
 
 gsap.registerPlugin(DrawSVGPlugin);
 
@@ -12,7 +13,10 @@ const SvgGsap = () => {
   useEffect(() => {
     const firstTimeline = gsap.timeline({ paused: true }); // First animation timeline
     const secondTimeline = gsap.timeline({ paused: true }); // Second animation timeline
-  
+    const logoTimeline = gsap.timeline({paused: true});
+    const logoOutro = gsap.timeline({paused: true});
+    const backoutro = gsap.timeline({paused: true});
+
     // Select all paths with the class "cls-1"
     const paths = document.querySelectorAll('.cls-1');
   
@@ -38,11 +42,55 @@ const SvgGsap = () => {
     firstTimeline.eventCallback('onComplete', () => {
       secondTimeline.play();
     });
+
+    secondTimeline.eventCallback('onComplete', () => {
+        logoTimeline.play();
+    })
+
+
+    logoTimeline.eventCallback('onComplete', () => {
+        logoOutro.play();
+    })
+
+    logoOutro.eventCallback('onComplete', () => {
+        backoutro.play();
+    })
+
+    logoTimeline.to('.logo',{
+        duration:1,
+        css:{
+            transform: 'scale(1)',
+        },
+        ease: 'expo.out'
+    })
+
   
+
+    logoOutro.to('.logo',{
+        duration:1,
+        delay: 1,
+        css:{
+            transform: 'scale(0)',
+        },
+        ease: 'back.in'
+    })
+
+    
+
+    backoutro.to('.introback',{
+        duration:1,
+        xPercent:100,
+        ease: 'expo.out'
+    })
+    
     // Start the first timeline
     firstTimeline.play();
   }, []);
   return (
+    <>
+    <div className='min-h-screen min-w-screen introback justify-center items-center flex absolute top-0 left-0 z-10 font-[family-name:var(--font-bodoni-moda)]' style={{backgroundColor:'#3E160C'}}>
+
+<div className="w-1/2 lg:w-1/4 xl:w-1/4">
     <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 873.05 172.16">
       <g id="Layer_1-2" data-name="Layer 1">
         <g>
@@ -89,6 +137,23 @@ const SvgGsap = () => {
         </g>
       </g>
     </svg>
+    <div className='flex justify-center'>
+
+    <Image
+        src="/logo.png"
+        alt="MR Intl Logo"
+        width={400}
+        height={100}
+        className="justify-center text-center logo scale-0"
+    />
+        
+    </div>
+    </div>
+
+
+</div>
+    </>
+
   );
 };
 
