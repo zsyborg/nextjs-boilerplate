@@ -9,6 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@lottiefiles/lottie-js": "^0.4.2",
+    "bodymovin": "^4.13.0",
+    "gsap": "^3.13.0",
+    "lottie-web": "^5.13.0",
     "next": "15.3.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

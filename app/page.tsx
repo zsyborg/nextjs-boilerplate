@@ -2,8 +2,8 @@
 import Image from "next/image";
 import { useState, useRef } from "react";
 import { TfiClose } from "react-icons/tfi";
-
-
+import SvgTag from './/components/SvgTag';
+import SvgGsap from "./components/SvgGsap";
 export default function Home() {
   
   const[isAbout, setisAbout] = useState(false)
@@ -123,24 +123,16 @@ export default function Home() {
     // </div>
 <div>
     <div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 min-h-screen xl:hidden lg:hidden font-[family-name:var(--font-bodoni-moda)]">
-    <div className="justify-center items-center grid abt">
+    <div className="justify-center items-center grid brand">
       <p className="p-2 text-white boxline" style={{backgroundColor:"var(--navy)"}}>Brands</p>
     </div>
-    <div className="justify-center items-center grid brand">
+    <div className="justify-center items-center grid prod">
       <p className="p-2 text-white boxline" style={{backgroundColor:"var(--navy)"}}>Products</p>
     </div>
-    <div className="justify-center items-center grid relative videocontainer" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-    <video
-        ref={videoRef}
-        loop
-        muted
-        playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover"
-        src="/runwayglobe.mp4"
-      />
+    <div className="justify-center items-center grid relative serv">
       <p className="p-2 text-white boxline z-10" style={{backgroundColor:"var(--navy)"}}>Services</p>
     </div>
-    <div className="justify-center items-center grid serv">
+    <div className="justify-center items-center grid abt">
     <a href="#" onClick={toggleAbout}>
       <p className=" p-2 text-white boxline" style={{backgroundColor:"var(--navy)"}}>About Us</p>
     </a>
@@ -149,15 +141,15 @@ export default function Home() {
 
 
 <div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 min-h-screen font-[family-name:var(--font-bodoni-moda)]">
-    <div className="justify-center items-center grid serv" >
+    <div className="justify-center items-center grid abt" >
       <a href="#" onClick={toggleAbout}>
       <p className=" p-2 text-white boxline" style={{backgroundColor:"var(--navy)"}}>About Us</p>
       </a>
     </div>
-    <div className="justify-center items-center grid abt">
+    <div className="justify-center items-center grid brand">
       <p className="p-2 text-white boxline" style={{backgroundColor:"var(--navy)"}}>Brands</p>
     </div>
-    <div className="justify-center items-center grid brand">
+    <div className="justify-center items-center grid prod">
       <p className="p-2 text-white boxline" style={{backgroundColor:"var(--navy)"}}>Products</p>
     </div>
     <div className="justify-center items-center grid relative videocontainer" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
@@ -167,8 +159,8 @@ export default function Home() {
         muted
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover"
-        src="/runwayglobe.mp4"
-        style={{objectPosition:'-810px'}}
+        src="/newglobe.mp4"
+        style={{objectPosition:'-620px'}}
       />
       <p className="p-2 text-white boxline z-10" style={{backgroundColor:"var(--navy)"}}>Services</p>
     </div>
@@ -194,13 +186,17 @@ export default function Home() {
   </h2>
     </a>
 
-      <Image
-        src="/logo.png"
+      {/* <Image
+        src="/tagline.svg"
         alt="MR Intl Logo"
         width={200}
         height={100}
         className="justify-center text-center"
-        />
+        /> */}
+
+        {/* <SvgTag/> */}
+        <SvgGsap/>
+        <p>A Spirit of Enterprise. An Obsession for Quality</p>
       <h2 className="p-8 text-justify content" style={{color:"##E8D9C4"}}>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, Lorem ipsum dolor sit amet.., comes from a line in section 1.10.32.</h2>
 
 
