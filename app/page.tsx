@@ -8,9 +8,27 @@ export default function Home() {
   
   const[isAbout, setisAbout] = useState(false)
   const [showVideo, setShowVideo] = useState(true);
+  const[isServ, setisServ] = useState(false)
+  const[ispro, setispro] = useState(false)
+  const[isbra, setisbra] = useState(false)
+
+  const toggleServices = () => {
+    setisServ(!isServ);
+    console.log('toggled')
+  }
 
   const toggleAbout = () => {
     setisAbout(!isAbout);
+    console.log('toggled')
+  }
+
+  const toggleBrand = () => {
+    setisbra(!isbra);
+    console.log('toggled')
+  }
+
+  const toggleProduct = () => {
+    setispro(!ispro);
     console.log('toggled')
   }
 
@@ -158,13 +176,13 @@ export default function Home() {
       />
     )}
     <div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 min-h-screen xl:hidden lg:hidden font-[family-name:var(--font-bodoni-moda)]">
-    <div className="justify-center items-center grid brand">
+    <div className="justify-center items-center grid brand" onClick={toggleBrand}>
       {/* <p className="p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>Brands</p> */}
     </div>
-    <div className="justify-center items-center grid prod">
+    <div className="justify-center items-center grid prod" onClick={toggleProduct}>
       {/* <p className="p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>Products</p> */}
     </div>
-    <div className="justify-center items-center grid relative serv">
+    <div className="justify-center items-center grid relative serv" onClick={toggleServices}>
       {/* <p className="p-2 text-white boxline z-10" style={{backgroundColor:"var(--rough)"}}>Services</p> */}
     </div>
     <div className="justify-center items-center grid" onClick={toggleAbout}>
@@ -189,8 +207,8 @@ export default function Home() {
 
 
 <div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 min-h-screen bodoni-moda-400">
-    <div className="justify-center items-center grid" >
-      <a href="#" onClick={toggleAbout}>
+    <div className="justify-center items-center grid" onClick={toggleAbout}>
+      <a href="#" >
         <div className="text-center pale">
           <p className="font-[family-name:var(--font-bodoni-moda)] gold" style={{fontSize:'14pt'}}>Est. 2000</p>
           <Image
@@ -208,13 +226,13 @@ export default function Home() {
       {/* <p className=" p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>About Us</p> */}
       </a>
     </div>
-    <div className="justify-center items-center grid brand">
+    <div className="justify-center items-center grid brand" onClick={toggleBrand}>
       {/* <p className="p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>Brands</p> */}
     </div>
-    <div className="justify-center items-center grid prod">
+    <div className="justify-center items-center grid prod" onClick={toggleProduct}>
       {/* <p className="p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>Products</p> */}
     </div>
-    <div className="justify-center items-center grid serv relative videocontainer" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+    <div className="justify-center items-center grid serv relative videocontainer" onClick={toggleServices} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
     <video
         ref={videoRef}
         loop
@@ -224,7 +242,7 @@ export default function Home() {
         src="/newglobe.mp4"
         style={{objectPosition:'-620px'}}
       />
-      <p className="p-2 text-white boxline z-10" style={{backgroundColor:"var(--navy)"}}>Services</p>
+      {/* <p className="p-2 text-white boxline z-10" style={{backgroundColor:"var(--navy)"}}>Services</p> */}
     </div>
 </div>
 
@@ -266,6 +284,96 @@ export default function Home() {
 
   </div>
 </div>
+
+
+
+
+    <div className={isServ ? 'min-h-screen min-w-screen absolute top-0 left-0 z-10 font-[family-name:var(--font-bodoni-moda)]' : 'hidden'} style={{backgroundColor:'#3E160C'}}>
+      <div className="min-h-screen justify-center justify-items-center items-center grid content-center ">
+        <a className="absolute top-0 right-0 z-10" onClick={toggleServices} href="#">
+    
+      <h2 className="text-4xl p-8 cursor-pointer font-light text-right font-[family-name:var(--font-geist-sans)]" style={{color:"##E8D9C4"}}>
+        <TfiClose style={{color:"##E8D9C4"}}/>
+      </h2>
+        </a>
+    
+          {/* <Image
+            src="/tagline.svg"
+            alt="MR Intl Logo"
+            width={200}
+            height={100}
+            className="justify-center text-center"
+            /> */}
+    
+            {/* <SvgTag/> */}
+            <p className="gold text-2xl">Services</p>
+          <h2 className="p-8 text-justify content" style={{color:"##E8D9C4"}}>Contrary to popular belief, Lorem Ipsum is not simply random text. It has during the Renaissance. The first line of Lorem Ipsum, Lorem ipsum dolor sit amet.., comes from a line in section 1.10.32.</h2>
+    
+    
+      </div>
+    </div>
+
+
+    
+
+    <div className={ispro ? 'min-h-screen min-w-screen absolute top-0 left-0 z-10 font-[family-name:var(--font-bodoni-moda)]' : 'hidden'} style={{backgroundColor:'#3E160C'}}>
+      <div className="min-h-screen justify-center justify-items-center items-center grid content-center ">
+        <a className="absolute top-0 right-0 z-10" onClick={toggleProduct} href="#">
+    
+      <h2 className="text-4xl p-8 cursor-pointer font-light text-right font-[family-name:var(--font-geist-sans)]" style={{color:"##E8D9C4"}}>
+        <TfiClose style={{color:"##E8D9C4"}}/>
+      </h2>
+        </a>
+    
+          {/* <Image
+            src="/tagline.svg"
+            alt="MR Intl Logo"
+            width={200}
+            height={100}
+            className="justify-center text-center"
+            /> */}
+    
+            {/* <SvgTag/> */}
+            <p className="gold text-2xl">Products</p>
+          <h2 className="p-8 text-justify content" style={{color:"##E8D9C4"}}>Contrary to popular belief, Lorem Ipsum is not simply random text. It has during the Renaissance. The first line of Lorem Ipsum, Lorem ipsum dolor sit amet.., comes from a line in section 1.10.32.</h2>
+    
+    
+      </div>
+    </div>
+
+
+
+
+    <div className={isbra ? 'min-h-screen min-w-screen absolute top-0 left-0 z-10 font-[family-name:var(--font-bodoni-moda)]' : 'hidden'} style={{backgroundColor:'#3E160C'}}>
+      <div className="min-h-screen justify-center justify-items-center items-center grid content-center ">
+        <a className="absolute top-0 right-0 z-10" onClick={toggleBrand} href="#">
+    
+      <h2 className="text-4xl p-8 cursor-pointer font-light text-right font-[family-name:var(--font-geist-sans)]" style={{color:"##E8D9C4"}}>
+        <TfiClose style={{color:"##E8D9C4"}}/>
+      </h2>
+        </a>
+    
+          {/* <Image
+            src="/tagline.svg"
+            alt="MR Intl Logo"
+            width={200}
+            height={100}
+            className="justify-center text-center"
+            /> */}
+    
+            {/* <SvgTag/> */}
+            <p className="gold text-2xl">Brands</p>
+          <h2 className="p-8 text-justify content" style={{color:"##E8D9C4"}}>Contrary to popular belief, Lorem Ipsum is not simply random text. It has during the Renaissance. The first line of Lorem Ipsum, Lorem ipsum dolor sit amet.., comes from a line in section 1.10.32.</h2>
+    
+    
+      </div>
+    </div>
+
+
+
+
+
+
 </div>
   );
 }
