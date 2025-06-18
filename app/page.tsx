@@ -192,7 +192,7 @@ export default function Home() {
     <div className="justify-center items-center grid" >
       <a href="#" onClick={toggleAbout}>
         <div className="text-center pale">
-          <p className="font-[family-name:var(--font-bodoni-moda)] gold" style={{fontSize:'14pt'}}>Estblished 2000</p>
+          <p className="font-[family-name:var(--font-bodoni-moda)] gold" style={{fontSize:'14pt'}}>Est. 2000</p>
           <Image
            src="/newlogo.png"
            alt="MR Intl Logo"
