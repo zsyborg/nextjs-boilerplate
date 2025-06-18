@@ -363,7 +363,13 @@ export default function Home() {
     
             {/* <SvgTag/> */}
             <p className="gold text-2xl">Services</p>
-          <h2 className="p-8 text-justify content" style={{color:"##E8D9C4"}}>Contrary to popular belief, Lorem Ipsum is not simply random text. It has during the Renaissance. The first line of Lorem Ipsum, Lorem ipsum dolor sit amet.., comes from a line in section 1.10.32.</h2>
+          <h2 className="p-8 text-justify content" style={{color:"##E8D9C4"}}>Digital Media & IT Solutions</h2>
+          <p className="gold">At [Your Company Name], we're at the forefront of innovation, offering cutting-edge Digital Media and IT Solutions tailored to meet the evolving needs of businesses and individuals. Our expertise spans a wide range of services, from developing captivating digital media campaigns to crafting bespoke IT solutions that drive efficiency, productivity, and growth. Whether you're looking to elevate your brand's online presence, streamline your operations, or harness the power of technology to achieve your goals, our team of experts is here to guide you every step of the way.
+            </p>
+            <br/>
+            <p className="gold">
+              
+          In addition to our Digital Media and IT Solutions, we're also passionate about empowering our clients to navigate the exciting world of Web3. From blockchain development and NFT creation to decentralized applications and cryptocurrency integration, we're here to support you on your journey.</p>
     
     
       </div>
