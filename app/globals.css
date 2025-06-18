@@ -72,6 +72,33 @@ body {
 }
 
 
+.brand {
+  overflow: hidden;
+  position: relative;
+}
+
+.brand video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.brand {
+  overflow: hidden;
+  position: relative;
+}
+
+.prod video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .bodoni-moda-400 {
   font-family: "Bodoni Moda", serif;
   font-optical-sizing: auto;
@@ -106,6 +133,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  overflow: hidden;
 }
 
 

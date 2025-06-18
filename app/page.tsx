@@ -35,6 +35,8 @@ export default function Home() {
   const videoRef = useRef<HTMLVideoElement>(null)
   const introvideoRef = useRef<HTMLVideoElement>(null)
 
+
+
   const handleMouseEnter = () => {
     videoRef.current?.play();
   };
@@ -49,6 +51,7 @@ export default function Home() {
       introvideoRef.current.play();
       introvideoRef.current.requestFullscreen();
     }
+    videoRef.current?.play()
   }, []);
 
   
@@ -158,7 +161,7 @@ export default function Home() {
     //   </footer>
     // </div>
 <div>
-    {showVideo && (
+    {/* {showVideo && (
     <video
         ref={videoRef}
         src="/intro.mp4"
@@ -174,15 +177,44 @@ export default function Home() {
         onEnded={handleVideoEnd}
         onEndedCapture={handleVideoEnd}
       />
-    )}
+    )} */}
+
+    {/* Small Screen */}
     <div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 min-h-screen xl:hidden lg:hidden font-[family-name:var(--font-bodoni-moda)]">
     <div className="justify-center items-center grid brand" onClick={toggleBrand}>
+    <video
+        ref={videoRef}
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover"
+        src="/globe.mp4"
+      />
       {/* <p className="p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>Brands</p> */}
     </div>
     <div className="justify-center items-center grid prod" onClick={toggleProduct}>
+    <video
+        ref={videoRef}
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover"
+        src="/products.mp4"
+      />
       {/* <p className="p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>Products</p> */}
     </div>
     <div className="justify-center items-center grid relative serv" onClick={toggleServices}>
+    <video
+        ref={videoRef}
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover"
+        src="/services.mp4"
+      />
       {/* <p className="p-2 text-white boxline z-10" style={{backgroundColor:"var(--rough)"}}>Services</p> */}
     </div>
     <div className="justify-center items-center grid" onClick={toggleAbout}>
@@ -206,7 +238,12 @@ export default function Home() {
 </div>
 
 
-<div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 min-h-screen bodoni-moda-400">
+
+
+
+{/* Large Screen */}
+
+<div className="grid grid-cols-2 lg:grid-cols-4 gap-8 xl:grid-cols-4 min-h-screen bodoni-moda-400">
     <div className="justify-center items-center grid" onClick={toggleAbout}>
       <a href="#" >
         <div className="text-center pale">
@@ -226,15 +263,35 @@ export default function Home() {
       {/* <p className=" p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>About Us</p> */}
       </a>
     </div>
-    <div className="justify-center items-center grid brand" onClick={toggleBrand}>
+    <div className="justify-center relative videocontainer items-center grid brand overflow-clip" onClick={toggleBrand} >
+    <video
+      
+        ref={videoRef}
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover"
+        src="/globe.mp4"
+      />
       {/* <p className="p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>Brands</p> */}
     </div>
-    <div className="justify-center items-center grid prod" onClick={toggleProduct}>
-      {/* <p className="p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>Products</p> */}
-    </div>
-    <div className="justify-center items-center grid serv relative videocontainer" onClick={toggleServices} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+    <div className="justify-center videocontainer relative items-center grid overflow-clip prod" onClick={toggleProduct} >
     <video
         ref={videoRef}
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover"
+        src="/products.mp4"
+      />
+      {/* <p className="p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>Products</p> */}
+    </div>
+    <div className="justify-center items-center grid serv relative videocontainer" onClick={toggleServices}>
+    <video
+        ref={videoRef}
+        autoPlay
         loop
         muted
         playsInline
