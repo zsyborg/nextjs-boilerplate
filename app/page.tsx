@@ -239,8 +239,7 @@ export default function Home() {
         muted
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover"
-        src="/newglobe.mp4"
-        style={{objectPosition:'-620px'}}
+        src="/services.mp4"
       />
       {/* <p className="p-2 text-white boxline z-10" style={{backgroundColor:"var(--navy)"}}>Services</p> */}
     </div>
