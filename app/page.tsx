@@ -15,6 +15,7 @@ export default function Home() {
   }
 
   const videoRef = useRef<HTMLVideoElement>(null)
+  const introvideoRef = useRef<HTMLVideoElement>(null)
 
   const handleMouseEnter = () => {
     videoRef.current?.play();
@@ -24,7 +25,6 @@ export default function Home() {
     videoRef.current?.pause();
   };
 
-  const introvideoRef = useRef(null);
 
   useEffect(() => {
     if (introvideoRef.current) {
