@@ -159,36 +159,63 @@ export default function Home() {
     )}
     <div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 min-h-screen xl:hidden lg:hidden font-[family-name:var(--font-bodoni-moda)]">
     <div className="justify-center items-center grid brand">
-      <p className="p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>Brands</p>
+      {/* <p className="p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>Brands</p> */}
     </div>
     <div className="justify-center items-center grid prod">
-      <p className="p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>Products</p>
+      {/* <p className="p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>Products</p> */}
     </div>
     <div className="justify-center items-center grid relative serv">
-      <p className="p-2 text-white boxline z-10" style={{backgroundColor:"var(--rough)"}}>Services</p>
+      {/* <p className="p-2 text-white boxline z-10" style={{backgroundColor:"var(--rough)"}}>Services</p> */}
     </div>
-    <div className="justify-center items-center grid abt">
-    <a href="#" onClick={toggleAbout}>
-      <p className=" p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>About Us</p>
+    <div className="justify-center items-center grid" onClick={toggleAbout}>
+    <a href="#" >
+      <div className="text-center flex flex-col items-center content-centertext-center">
+    <p className="font-[family-name:var(--font-bodoni-moda)] gold" style={{fontSize:'14pt'}}>Estblished 2000</p>
+          <Image
+           src="/newlogo.png"
+           alt="MR Intl Logo"
+            width={111}
+            height={100}
+          />
+
+        <p className="pale text-center font-[family-name:var(--font-bodoni-moda)] gold">
+          A Spirit of Enterprise
+          </p>
+          <p className="text-center pale font-[family-name:var(--font-bodoni-moda)] gold">An Obsession for Quality</p>
+        </div>
     </a>
     </div>
 </div>
 
 
-<div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 min-h-screen font-[family-name:var(--font-bodoni-moda)]">
-    <div className="justify-center items-center grid abt" >
+<div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 min-h-screen bodoni-moda-400">
+    <div className="justify-center items-center grid" >
       <a href="#" onClick={toggleAbout}>
-      <p className=" p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>About Us</p>
+        <div className="text-center pale">
+          <p className="font-[family-name:var(--font-bodoni-moda)] gold" style={{fontSize:'14pt'}}>Estblished 2000</p>
+          <Image
+           src="/newlogo.png"
+           alt="MR Intl Logo"
+            width={222}
+            height={100}
+          />
+
+        </div>
+        <p className="pale text-center font-[family-name:var(--font-bodoni-moda)] gold">
+          A Spirit of Enterprise
+          </p>
+          <p className="text-center pale font-[family-name:var(--font-bodoni-moda)] gold">An Obsession for Quality</p>
+      {/* <p className=" p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>About Us</p> */}
       </a>
     </div>
     <div className="justify-center items-center grid brand">
-      <p className="p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>Brands</p>
+      {/* <p className="p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>Brands</p> */}
     </div>
     <div className="justify-center items-center grid prod">
-      <p className="p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>Products</p>
+      {/* <p className="p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>Products</p> */}
     </div>
     <div className="justify-center items-center grid serv relative videocontainer" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-    {/* <video
+    <video
         ref={videoRef}
         loop
         muted
@@ -196,7 +223,7 @@ export default function Home() {
         className="absolute top-0 left-0 w-full h-full object-cover"
         src="/newglobe.mp4"
         style={{objectPosition:'-620px'}}
-      /> */}
+      />
       <p className="p-2 text-white boxline z-10" style={{backgroundColor:"var(--navy)"}}>Services</p>
     </div>
 </div>

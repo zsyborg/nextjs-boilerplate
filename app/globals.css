@@ -26,12 +26,21 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
   overflow: hidden;
+  font-family: "Bodoni Moda", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 
+.gold {
+  color: #F0E68C;
+}
 
+.palegod{
+  color: var(--pale);
+}
 .content{
   font-size: 10pt;
   color: #E8D9C4;
@@ -60,6 +69,14 @@ body {
   background-image: url('/products1.webp');
   background-size: cover;
   background-position: center;
+}
+
+
+.bodoni-moda-400 {
+  font-family: "Bodoni Moda", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .boxline{
