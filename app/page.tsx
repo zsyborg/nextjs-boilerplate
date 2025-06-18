@@ -161,7 +161,7 @@ export default function Home() {
     //   </footer>
     // </div>
 <div>
-    {/* {showVideo && (
+    {showVideo && (
     <video
         ref={videoRef}
         src="/intro.mp4"
@@ -177,7 +177,7 @@ export default function Home() {
         onEnded={handleVideoEnd}
         onEndedCapture={handleVideoEnd}
       />
-    )} */}
+    )}
 
     {/* Small Screen */}
     <div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 min-h-screen xl:hidden lg:hidden font-[family-name:var(--font-bodoni-moda)]">
