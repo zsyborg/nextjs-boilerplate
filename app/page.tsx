@@ -181,7 +181,7 @@ export default function Home() {
 
     {/* Small Screen */}
     <div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 min-h-screen xl:hidden lg:hidden font-[family-name:var(--font-bodoni-moda)]">
-    <div className="justify-center items-center grid brand" onClick={toggleBrand}>
+    <div className="justify-center items-center relative grid videocontainer brand" onClick={toggleBrand}>
     <video
         ref={videoRef}
         autoPlay
@@ -193,7 +193,7 @@ export default function Home() {
       />
       {/* <p className="p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>Brands</p> */}
     </div>
-    <div className="justify-center items-center grid prod" onClick={toggleProduct}>
+    <div className="justify-center items-center relative grid videocontainer prod" onClick={toggleProduct}>
     <video
         ref={videoRef}
         autoPlay
@@ -205,7 +205,7 @@ export default function Home() {
       />
       {/* <p className="p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>Products</p> */}
     </div>
-    <div className="justify-center items-center grid relative serv" onClick={toggleServices}>
+    <div className="justify-center items-center grid relative serv videocontainer" onClick={toggleServices}>
     <video
         ref={videoRef}
         autoPlay

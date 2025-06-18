@@ -99,6 +99,17 @@ body {
   height: 100%;
   object-fit: cover;
 }
+
+
+.serv video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .bodoni-moda-400 {
   font-family: "Bodoni Moda", serif;
   font-optical-sizing: auto;
