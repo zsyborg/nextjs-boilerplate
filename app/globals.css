@@ -42,17 +42,19 @@ body {
 
 /* Home Page */
 .abt{
-  background-image: url('https://picsum.photos/800/800');
+  background-image: url('/brand1.webp');
   background-size: cover;
+  background-position: center;
 }
 .serv{
-  background-image: url('/gemini_globe1.png');
+  background-image: url('/gemini_globe1.webp');
   background-size: cover;
   background-position: center;
 }
 .brand{
-  background-image: url('https://picsum.photos/800/802');
+  background-image: url('/brand2.webp');
   background-size: cover;
+  background-position: center;
 }
 .prod{
   background-image: url('/products1.webp');

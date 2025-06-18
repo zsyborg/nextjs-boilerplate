@@ -152,8 +152,8 @@ export default function Home() {
     <div className="justify-center items-center grid prod">
       <p className="p-2 text-white boxline" style={{backgroundColor:"var(--navy)"}}>Products</p>
     </div>
-    <div className="justify-center items-center grid relative videocontainer" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-    <video
+    <div className="justify-center items-center grid serv relative videocontainer" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+    {/* <video
         ref={videoRef}
         loop
         muted
@@ -161,7 +161,7 @@ export default function Home() {
         className="absolute top-0 left-0 w-full h-full object-cover"
         src="/newglobe.mp4"
         style={{objectPosition:'-620px'}}
-      />
+      /> */}
       <p className="p-2 text-white boxline z-10" style={{backgroundColor:"var(--navy)"}}>Services</p>
     </div>
 </div>
