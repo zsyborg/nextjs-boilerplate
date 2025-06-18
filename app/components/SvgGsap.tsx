@@ -49,7 +49,7 @@ const SvgGsap = () => {
 
 
     logoTimeline.eventCallback('onComplete', () => {
-        logoOutro.play();
+        // logoOutro.play();
     })
 
     logoOutro.eventCallback('onComplete', () => {
@@ -88,7 +88,7 @@ const SvgGsap = () => {
   }, []);
   return (
     <>
-    <div className='min-h-screen min-w-screen introback justify-center items-center flex absolute top-0 left-0 z-10 font-[family-name:var(--font-bodoni-moda)]' style={{backgroundColor:'#3E160C'}}>
+    <div className='min-h-screen min-w-screen introback justify-center items-center flex absolute top-0 left-0 z-10 font-[family-name:var(--font-bodoni-moda)]' style={{backgroundColor:'#1d0803'}}>
 
 <div className="w-1/2 lg:w-1/4 xl:w-1/4">
     <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 873.05 172.16">
@@ -142,8 +142,8 @@ const SvgGsap = () => {
     <Image
         src="/logo.png"
         alt="MR Intl Logo"
-        width={400}
-        height={100}
+        width={444}
+        height={255}
         className="justify-center text-center logo scale-0"
     />
         

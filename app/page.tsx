@@ -124,17 +124,17 @@ export default function Home() {
 <div>
     <div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 min-h-screen xl:hidden lg:hidden font-[family-name:var(--font-bodoni-moda)]">
     <div className="justify-center items-center grid brand">
-      <p className="p-2 text-white boxline" style={{backgroundColor:"var(--navy)"}}>Brands</p>
+      <p className="p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>Brands</p>
     </div>
     <div className="justify-center items-center grid prod">
-      <p className="p-2 text-white boxline" style={{backgroundColor:"var(--navy)"}}>Products</p>
+      <p className="p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>Products</p>
     </div>
     <div className="justify-center items-center grid relative serv">
-      <p className="p-2 text-white boxline z-10" style={{backgroundColor:"var(--navy)"}}>Services</p>
+      <p className="p-2 text-white boxline z-10" style={{backgroundColor:"var(--rough)"}}>Services</p>
     </div>
     <div className="justify-center items-center grid abt">
     <a href="#" onClick={toggleAbout}>
-      <p className=" p-2 text-white boxline" style={{backgroundColor:"var(--navy)"}}>About Us</p>
+      <p className=" p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>About Us</p>
     </a>
     </div>
 </div>
@@ -143,14 +143,14 @@ export default function Home() {
 <div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 min-h-screen font-[family-name:var(--font-bodoni-moda)]">
     <div className="justify-center items-center grid abt" >
       <a href="#" onClick={toggleAbout}>
-      <p className=" p-2 text-white boxline" style={{backgroundColor:"var(--navy)"}}>About Us</p>
+      <p className=" p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>About Us</p>
       </a>
     </div>
     <div className="justify-center items-center grid brand">
-      <p className="p-2 text-white boxline" style={{backgroundColor:"var(--navy)"}}>Brands</p>
+      <p className="p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>Brands</p>
     </div>
     <div className="justify-center items-center grid prod">
-      <p className="p-2 text-white boxline" style={{backgroundColor:"var(--navy)"}}>Products</p>
+      <p className="p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>Products</p>
     </div>
     <div className="justify-center items-center grid serv relative videocontainer" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
     {/* <video
