@@ -189,7 +189,7 @@ export default function Home() {
         muted
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover"
-        src="/globe.mp4"
+        src="/brands.mp4"
       />
       {/* <p className="p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>Brands</p> */}
     </div>
@@ -272,7 +272,7 @@ export default function Home() {
         muted
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover"
-        src="/globe.mp4"
+        src="/brands.mp4"
       />
       {/* <p className="p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>Brands</p> */}
     </div>
