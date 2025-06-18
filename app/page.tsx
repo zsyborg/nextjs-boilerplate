@@ -1,13 +1,14 @@
 'use client'
 import Image from "next/image";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { TfiClose } from "react-icons/tfi";
 import SvgTag from './/components/SvgTag';
 import SvgGsap from "./components/SvgGsap";
 export default function Home() {
   
   const[isAbout, setisAbout] = useState(false)
-  
+  const [showVideo, setShowVideo] = useState(true);
+
   const toggleAbout = () => {
     setisAbout(!isAbout);
     console.log('toggled')
@@ -22,6 +23,23 @@ export default function Home() {
   const handleMouseLeave = () => {
     videoRef.current?.pause();
   };
+
+  const introvideoRef = useRef(null);
+
+  useEffect(() => {
+    if (introvideoRef.current) {
+      introvideoRef.current.play();
+      introvideoRef.current.requestFullscreen();
+    }
+  }, []);
+
+  
+  const handleVideoEnd = () => {
+    setShowVideo(false);
+    document.exitFullscreen();
+    console.log('Video Ended')
+  };
+
 
   return (
     // <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
@@ -122,6 +140,23 @@ export default function Home() {
     //   </footer>
     // </div>
 <div>
+    {showVideo && (
+    <video
+        ref={videoRef}
+        src="/intro.mp4"
+        autoPlay
+        muted
+        playsInline
+        style={{
+            width: '100%',
+            height: '100vh',
+            objectFit: 'cover',
+            zIndex: 1,
+        }}
+        onEnded={handleVideoEnd}
+        onEndedCapture={handleVideoEnd}
+      />
+    )}
     <div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 min-h-screen xl:hidden lg:hidden font-[family-name:var(--font-bodoni-moda)]">
     <div className="justify-center items-center grid brand">
       <p className="p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>Brands</p>
@@ -178,7 +213,7 @@ export default function Home() {
 
 {/* About Section */}
 
-   <SvgGsap/>
+   {/* <SvgGsap/> */}
 
 <div className={isAbout ? 'min-h-screen min-w-screen absolute top-0 left-0 z-10 font-[family-name:var(--font-bodoni-moda)]' : 'hidden'} style={{backgroundColor:'#3E160C'}}>
   <div className="min-h-screen justify-center justify-items-center items-center grid content-center ">
