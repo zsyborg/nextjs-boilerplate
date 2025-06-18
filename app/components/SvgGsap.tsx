@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
 import Image from 'next/image';
+import css from 'styled-jsx/css';
 
 gsap.registerPlugin(DrawSVGPlugin);
 
@@ -15,6 +16,10 @@ const SvgGsap = () => {
     const secondTimeline = gsap.timeline({ paused: true }); // Second animation timeline
     const logoTimeline = gsap.timeline({paused: true});
     const logoOutro = gsap.timeline({paused: true});
+    const topbar = gsap.timeline({paused: true})
+    const bottombar = gsap.timeline({paused: true})
+    const topbarout = gsap.timeline({paused: true})
+    const bottombarout = gsap.timeline({paused: true})
     const backoutro = gsap.timeline({paused: true});
 
     // Select all paths with the class "cls-1"
@@ -49,13 +54,20 @@ const SvgGsap = () => {
 
 
     logoTimeline.eventCallback('onComplete', () => {
-        // logoOutro.play();
+      topbar.play()
+      bottombar.play()
+      logoOutro.play();
     })
-
+    
     logoOutro.eventCallback('onComplete', () => {
-        backoutro.play();
+      topbarout.play()
+      bottombarout.play()
     })
-
+    topbarout.eventCallback('onUpdate', () => {
+      backoutro.play();
+    })
+    
+    
     logoTimeline.to('.logo',{
         duration:1,
         css:{
@@ -74,14 +86,44 @@ const SvgGsap = () => {
         },
         ease: 'back.in'
     })
-
     
-
     backoutro.to('.introback',{
-        duration:1,
-        xPercent:100,
-        ease: 'expo.out'
+      duration:1,
+      xPercent:100,
+      ease: 'expo.out'
     })
+    
+    topbar.to('.topbar', {
+      css:{
+        top:'-203px'
+      },
+      duration: 2,
+      ease: 'expo.out'
+    })
+
+    bottombar.to('.bottombar', {
+      css:{
+        bottom:'-103px'
+      },
+      duration: 2,
+      ease: 'expo.out'
+    })
+    topbarout.to('.topbar', {
+      css:{
+        top:'-603px'
+      },
+      duration: 1,
+      ease: 'expo.out'
+    })
+
+    bottombarout.to('.bottombar', {
+      css:{
+        bottom:'-603px'
+      },
+      duration: 1,
+      ease: 'expo.out'
+    })
+
     
     // Start the first timeline
     firstTimeline.play();
@@ -144,14 +186,18 @@ const SvgGsap = () => {
         alt="MR Intl Logo"
         width={444}
         height={255}
-        className="justify-center text-center logo scale-0"
+        className="justify-center text-center logo scale-0 z-10"
     />
         
     </div>
-    </div>
+</div>
 
+
+      <div className='h-1/2 w-1.5 absolute -z-10 topbar' style={{backgroundColor:"var(--pale)"}}></div>
+      <div className='h-1/2 w-1.5 absolute -z-10 bottombar' style={{backgroundColor:"var(--pale)"}}></div>
 
 </div>
+
     </>
 
   );

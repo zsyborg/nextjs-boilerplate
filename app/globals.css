@@ -512,3 +512,14 @@ svg.active .svg-elem-40 {
       fill: transparent;
       stroke-width: 0px;
     }
+
+
+.topbar{
+  top: -500px;
+  border-radius: 3em;
+}
+
+.bottombar{
+  border-radius: 3em;
+  bottom: -500px;
+}
