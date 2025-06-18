@@ -316,7 +316,7 @@ export default function Home() {
 
    {/* <SvgGsap/> */}
 
-<div className={isAbout ? 'min-h-screen min-w-screen absolute top-0 left-0 z-10 font-[family-name:var(--font-bodoni-moda)]' : 'hidden'} style={{backgroundColor:'#3E160C'}}>
+<div className={isAbout ? 'min-h-screen min-w-screen zoom-fade-in absolute zoom-fade-in top-0 left-0 z-10 font-[family-name:var(--font-bodoni-moda)]' : 'transition-all scale-0 absolute top-0 left-0 duration-1000 opacity-0'} style={{backgroundColor:'#3E160C'}}>
   <div className="min-h-screen justify-center justify-items-center items-center grid content-center ">
     <a className="absolute top-0 right-0 z-10" onClick={toggleAbout} href="#">
 
@@ -344,7 +344,7 @@ export default function Home() {
 
 
 
-    <div className={isServ ? 'min-h-screen min-w-screen absolute top-0 left-0 z-10 font-[family-name:var(--font-bodoni-moda)]' : 'hidden'} style={{backgroundColor:'#3E160C'}}>
+    <div className={isServ ? 'min-h-screen min-w-screen absolute top-0 left-0 zoom-fade-in z-10 font-[family-name:var(--font-bodoni-moda)]' : 'transition-all scale-0 absolute top-0 left-0 duration-1000 opacity-0'} style={{backgroundColor:'#3E160C'}}>
       <div className="min-h-screen justify-center justify-items-center items-center grid content-center ">
         <a className="absolute top-0 right-0 z-10" onClick={toggleServices} href="#">
     
@@ -378,7 +378,7 @@ export default function Home() {
 
     
 
-    <div className={ispro ? 'min-h-screen min-w-screen absolute top-0 left-0 z-10 font-[family-name:var(--font-bodoni-moda)]' : 'hidden'} style={{backgroundColor:'#3E160C'}}>
+    <div className={ispro ? 'min-h-screen min-w-screen absolute top-0 left-0 zoom-fade-in z-10 font-[family-name:var(--font-bodoni-moda)]' : 'transition-all scale-0 absolute top-0 left-0 duration-1000 opacity-0'} style={{backgroundColor:'#3E160C'}}>
       <div className="min-h-screen justify-center justify-items-center items-center grid content-center ">
         <a className="absolute top-0 right-0 z-10" onClick={toggleProduct} href="#">
     
@@ -406,7 +406,7 @@ export default function Home() {
 
 
 
-    <div className={isbra ? 'min-h-screen min-w-screen absolute top-0 left-0 z-10 font-[family-name:var(--font-bodoni-moda)]' : 'hidden'} style={{backgroundColor:'#3E160C'}}>
+    <div className={isbra ? 'min-h-screen min-w-screen absolute top-0 left-0 zoom-fade-in z-10 font-[family-name:var(--font-bodoni-moda)]' : 'transition-all scale-0 absolute top-0 left-0 duration-1000 opacity-0'} style={{backgroundColor:'#3E160C'}}>
       <div className="min-h-screen justify-center justify-items-center items-center grid content-center ">
         <a className="absolute top-0 right-0 z-10" onClick={toggleBrand} href="#">
     

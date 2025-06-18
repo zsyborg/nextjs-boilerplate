@@ -579,3 +579,35 @@ svg.active .svg-elem-40 {
   border-radius: 3em;
   bottom: -500px;
 }
+
+.zoom-fade-in {
+  animation: zoomFadeIn 1s ease-in-out;
+}
+
+@keyframes zoomFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+
+.zoom-fade-out {
+  animation: zoomFadeOut 1s ease-in-out;
+}
+
+@keyframes zoomFadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
