@@ -181,38 +181,38 @@ export default function Home() {
 
     {/* Small Screen */}
     <div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 min-h-screen xl:hidden lg:hidden font-[family-name:var(--font-bodoni-moda)]">
-    <div className="justify-center items-center relative grid videocontainer brand" onClick={toggleBrand}>
+    <div className="justify-center items-center relative grid videocontainer" onClick={toggleBrand}>
     <video
         ref={videoRef}
         autoPlay
         loop
         muted
         playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover"
+        className="absolute vid top-0 left-0 w-full h-full object-cover"
         src="/brands.mp4"
       />
       {/* <p className="p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>Brands</p> */}
     </div>
-    <div className="justify-center items-center relative grid videocontainer prod" onClick={toggleProduct}>
+    <div className="justify-center items-center relative grid videocontainer " onClick={toggleProduct}>
     <video
         ref={videoRef}
         autoPlay
         loop
         muted
         playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover"
+        className="absolute vid top-0 left-0 w-full h-full object-cover"
         src="/products.mp4"
       />
       {/* <p className="p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>Products</p> */}
     </div>
-    <div className="justify-center items-center grid relative serv videocontainer" onClick={toggleServices}>
+    <div className="justify-center items-center grid relative videocontainer" onClick={toggleServices}>
     <video
         ref={videoRef}
         autoPlay
         loop
         muted
         playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover"
+        className="absolute vid top-0 left-0 w-full h-full object-cover"
         src="/services.mp4"
       />
       {/* <p className="p-2 text-white boxline z-10" style={{backgroundColor:"var(--rough)"}}>Services</p> */}
@@ -243,7 +243,7 @@ export default function Home() {
 
 {/* Large Screen */}
 
-<div className="grid grid-cols-2 lg:grid-cols-4 gap-1 xl:grid-cols-4 min-h-screen bodoni-moda-400">
+<div className="grid largescreen grid-cols-2 lg:grid-cols-4 gap-1 xl:grid-cols-4 min-h-screen bodoni-moda-400">
     <div className="justify-center items-center grid" onClick={toggleAbout}>
       <a href="#" >
         <div className="text-center pale">
