@@ -181,7 +181,7 @@ export default function Home() {
 
     {/* Small Screen */}
     <div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 min-h-screen xl:hidden lg:hidden font-[family-name:var(--font-bodoni-moda)]">
-    <div className="justify-center items-center relative grid videocontainer" onClick={toggleBrand}>
+    <div className="justify-center items-end relative grid videocontainer" onClick={toggleBrand}>
     <video
         ref={videoRef}
         autoPlay
@@ -191,9 +191,14 @@ export default function Home() {
         className="absolute vid top-0 left-0 w-full h-full object-cover"
         src="/brands.mp4"
       />
+      <div className=" z-10 gold h-40 items-center content-center conbox">
+        <p className="p-2 text-3xl" >
+          Brands
+        </p>
+      </div>
       {/* <p className="p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>Brands</p> */}
     </div>
-    <div className="justify-center items-center relative grid videocontainer " onClick={toggleProduct}>
+    <div className="justify-center items-end relative grid videocontainer " onClick={toggleProduct}>
     <video
         ref={videoRef}
         autoPlay
@@ -203,9 +208,14 @@ export default function Home() {
         className="absolute vid top-0 left-0 w-full h-full object-cover"
         src="/products.mp4"
       />
+      <div className=" z-10 gold h-40 items-center content-center conbox">
+        <p className="p-2 text-3xl" >
+          Products
+        </p>
+      </div>
       {/* <p className="p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>Products</p> */}
     </div>
-    <div className="justify-center items-center grid relative videocontainer" onClick={toggleServices}>
+    <div className="justify-center items-end grid relative videocontainer" onClick={toggleServices}>
     <video
         ref={videoRef}
         autoPlay
@@ -215,6 +225,11 @@ export default function Home() {
         className="absolute vid top-0 left-0 w-full h-full object-cover"
         src="/services.mp4"
       />
+      <div className=" z-10 gold h-40 items-center content-center conbox">
+        <p className="p-2 text-3xl" >
+          Services
+        </p>
+      </div>
       {/* <p className="p-2 text-white boxline z-10" style={{backgroundColor:"var(--rough)"}}>Services</p> */}
     </div>
     <div className="justify-center items-center grid" onClick={toggleAbout}>
@@ -265,9 +280,9 @@ export default function Home() {
     </div>
     <div className="justify-center relative videocontainer items-end grid overflow-clip" onClick={toggleBrand} >
       <div className=" z-10 gold h-40 items-center content-center conbox" style={{ width:"477px"}}>
-      <p className="p-2 text-3xl" >
-        Brands
-      </p>
+        <p className="p-2 text-3xl" >
+          Brands
+        </p>
       </div>
     <video
       
