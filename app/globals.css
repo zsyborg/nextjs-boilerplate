@@ -638,7 +638,7 @@ svg.active .svg-elem-40 {
 
 }
 .videocontainer:hover .conbox{
-  background-color: var(--pale);
+  background-color: #e8d9c48c;
   color: var(--rough);
 }
 

@@ -161,7 +161,7 @@ export default function Home() {
     //   </footer>
     // </div>
 <div>
-    {showVideo && (
+    {/* {showVideo && (
     <video
         ref={videoRef}
         src="/intro.mp4"
@@ -177,7 +177,7 @@ export default function Home() {
         onEnded={handleVideoEnd}
         onEndedCapture={handleVideoEnd}
       />
-    )}
+    )} */}
 
     {/* Small Screen */}
     <div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 min-h-screen xl:hidden lg:hidden font-[family-name:var(--font-bodoni-moda)]">
@@ -190,6 +190,7 @@ export default function Home() {
         playsInline
         className="absolute vid top-0 left-0 w-full h-full object-cover"
         src="/brands.mp4"
+        style={{objectPosition:'right'}}
       />
       <div className=" z-10 gold h-40 items-center content-center conbox">
         <p className="p-2 text-3xl" >
@@ -259,7 +260,7 @@ export default function Home() {
 {/* Large Screen */}
 
 <div className="grid largescreen grid-cols-2 lg:grid-cols-4 gap-1 xl:grid-cols-4 min-h-screen bodoni-moda-400">
-    <div className="justify-center items-center grid" onClick={toggleAbout}>
+    <div className="justify-center items-center grid bg-slate-900" onClick={toggleAbout}>
       <a href="#" >
         <div className="text-center pale">
           <p className="font-[family-name:var(--font-bodoni-moda)] gold" style={{fontSize:'14pt'}}>Est. 2000</p>
@@ -268,6 +269,8 @@ export default function Home() {
            alt="MR Intl Logo"
             width={222}
             height={100}
+        style={{objectPosition:'right'}}
+
           />
 
         </div>
