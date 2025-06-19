@@ -3,7 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --gold: #785D32;
+  --gold: #F0E68C;
   --pale: #E8D9C4;
   --rough: #1d0803;
   --navy: #050A30;
@@ -634,6 +634,8 @@ svg.active .svg-elem-40 {
 .conbox{
   background-color: var(--rough);
   transition: all 0.5s ease-in-out;
+  color: var(--gold);
+
 }
 .videocontainer:hover .conbox{
   background-color: var(--pale);

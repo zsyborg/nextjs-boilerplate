@@ -265,7 +265,7 @@ export default function Home() {
     </div>
     <div className="justify-center relative videocontainer items-end grid overflow-clip" onClick={toggleBrand} >
       <div className=" z-10 gold h-40 items-center content-center conbox" style={{ width:"477px"}}>
-      <p className="p-2 gold text-3xl" >
+      <p className="p-2 text-3xl" >
         Brands
       </p>
       </div>
@@ -281,7 +281,7 @@ export default function Home() {
       />
     </div>
     <div className="justify-center videocontainer relative items-end grid overflow-clip " onClick={toggleProduct} >
-    <div className=" z-10 w-100 gold h-40 items-center content-center conbox" style={{backgroundColor:"var(--rough)", width:"477px"}}>
+    <div className=" z-10 w-100 gold h-40 items-center content-center conbox" style={{width:"477px"}}>
       <p className="p-2 text-3xl">
         Products
       </p>
