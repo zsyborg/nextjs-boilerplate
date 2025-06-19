@@ -243,7 +243,7 @@ export default function Home() {
 
 {/* Large Screen */}
 
-<div className="grid grid-cols-2 lg:grid-cols-4 gap-8 xl:grid-cols-4 min-h-screen bodoni-moda-400">
+<div className="grid grid-cols-2 lg:grid-cols-4 gap-1 xl:grid-cols-4 min-h-screen bodoni-moda-400">
     <div className="justify-center items-center grid" onClick={toggleAbout}>
       <a href="#" >
         <div className="text-center pale">
@@ -263,7 +263,12 @@ export default function Home() {
       {/* <p className=" p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>About Us</p> */}
       </a>
     </div>
-    <div className="justify-center relative videocontainer items-center grid brand overflow-clip" onClick={toggleBrand} >
+    <div className="justify-center relative videocontainer items-end grid overflow-clip" onClick={toggleBrand} >
+      <div className=" z-10 gold h-40 items-center content-center conbox" style={{ width:"477px"}}>
+      <p className="p-2 gold text-3xl" >
+        Brands
+      </p>
+      </div>
     <video
       
         ref={videoRef}
@@ -271,34 +276,41 @@ export default function Home() {
         loop
         muted
         playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover"
+        className="absolute vid top-0 left-0 w-full h-full object-cover"
         src="/brands.mp4"
       />
-      {/* <p className="p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>Brands</p> */}
     </div>
-    <div className="justify-center videocontainer relative items-center grid overflow-clip prod" onClick={toggleProduct} >
+    <div className="justify-center videocontainer relative items-end grid overflow-clip " onClick={toggleProduct} >
+    <div className=" z-10 w-100 gold h-40 items-center content-center conbox" style={{backgroundColor:"var(--rough)", width:"477px"}}>
+      <p className="p-2 text-3xl">
+        Products
+      </p>
+      </div>
     <video
         ref={videoRef}
         autoPlay
         loop
         muted
         playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover"
+        className="absolute top-0 vid left-0 w-full h-full object-cover"
         src="/products.mp4"
       />
-      {/* <p className="p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>Products</p> */}
     </div>
-    <div className="justify-center items-center grid serv relative videocontainer" onClick={toggleServices}>
+    <div className="justify-center items-end grid  relative videocontainer" onClick={toggleServices}>
+    <div className="z-10 w-100 gold h-40 items-center content-center conbox" style={{ width:"477px"}}>
+      <p className="p-2 text-3xl">
+        Services
+      </p>
+      </div>
     <video
         ref={videoRef}
         autoPlay
         loop
         muted
         playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover"
+        className="absolute vid top-0 left-0 w-full h-full object-cover"
         src="/services.mp4"
       />
-      {/* <p className="p-2 text-white boxline z-10" style={{backgroundColor:"var(--navy)"}}>Services</p> */}
     </div>
 </div>
 

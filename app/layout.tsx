@@ -1,8 +1,19 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Bodoni_Moda } from "next/font/google";
 import "./globals.css";
+import {convertAniBinaryToCSS} from 'ani-cursor';
 
+async function applyCursor(selector, aniUrl) {
+    const response = await fetch(aniUrl);
+    const data = new Uint8Array(await response.arrayBuffer());
 
+    const style = document.createElement('style');
+    style.innerText = convertAniBinaryToCSS(selector, data);
+
+    document.head.appendChild(style);
+}
+
+applyCursor("#maindoc", "https://ani.cursors-4u.net/cursors/cur-13/cur1164.ani");
 
 const bodoniModa = Bodoni_Moda({
   variable: '--font-bodoni-moda',
@@ -40,6 +51,7 @@ export default function RootLayout({
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        id="maindoc"
       >
         {children}
       </body>
