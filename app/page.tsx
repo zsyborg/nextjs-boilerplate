@@ -266,8 +266,8 @@ export default function Home() {
 {/* Large Screen */}
 
 <div className="grid largescreen grid-cols-2 lg:grid-cols-4 gap-1 xl:grid-cols-4 min-h-screen bodoni-moda-400">
-    <div className="justify-center items-center grid bg-slate-900">
-      <a href="/about.html" >
+      <a href="/about.html" className="h-screen" >
+    <div className="justify-center items-center content-center h-full grid bg-slate-900">
         <div className="text-center pale">
           <p className="font-[family-name:var(--font-bodoni-moda)] gold" style={{fontSize:'14pt'}}>Est. 2000</p>
           <Image
@@ -285,8 +285,8 @@ export default function Home() {
           </p>
           <p className="text-center pale font-[family-name:var(--font-bodoni-moda)] gold">An Obsession for Quality</p>
       {/* <p className=" p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>About Us</p> */}
-      </a>
     </div>
+      </a>
     <div className="justify-center relative videocontainer items-end grid overflow-clip" onClick={toggleBrand} >
       <div className=" z-10 gold h-40 items-center content-center conbox" style={{ width:"477px"}}>
         <p className="p-2 text-3xl" >
