@@ -193,11 +193,11 @@ export default function Home() {
         loop
         muted
         playsInline
-        className="absolute vid top-0 left-0 w-full h-full object-cover object-right"
+        className="absolute vid top-0 left-0 w-full h-full object-cover"
         src="/brands.mp4"
-        style={{objectPosition:'right'}}
+        style={{objectPosition:'-100px'}}
       />
-      <div className=" z-10 gold h-40 items-center content-center conbox">
+      <div className=" z-10 gold h-20 items-center content-center conbox">
         <p className="p-2 text-3xl" >
           Brands
         </p>
@@ -214,7 +214,7 @@ export default function Home() {
         className="absolute vid top-0 left-0 w-full h-full object-cover"
         src="/products.mp4"
       />
-      <div className=" z-10 gold h-40 items-center content-center conbox">
+      <div className=" z-10 gold h-20 items-center content-center conbox">
         <p className="p-2 text-3xl" >
           Products
         </p>
@@ -231,7 +231,7 @@ export default function Home() {
         className="absolute vid top-0 left-0 w-full h-full object-cover"
         src="/services.mp4"
       />
-      <div className=" z-10 gold h-40 items-center content-center conbox">
+      <div className=" z-10 gold h-20 items-center content-center conbox">
         <p className="p-2 text-3xl" >
           Services
         </p>
