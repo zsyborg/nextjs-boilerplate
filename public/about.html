@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MR International</title>
+    <link rel="stylesheet" href="vendor/bootstrap-5.3.6-dist/css/bootstrap.min.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> 
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> -->
+    
+    <link
+    rel="stylesheet"
+    href="vendor/animate.min.css"
+    />
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body class="body" style="background-image: url('g1.jpg');">
+
+    <div class="container-fluid justify-content-center align-items-center text-center text-white main">
+
+        <div>
+            <h1>About Us</h1>
+            <div class="fluid">
+                
+            </div>
+            <!-- <img src="about.jpeg" width="600" alt="About Us" class="fluid"/> -->
+        </div>
+            
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <!-- <script src="vendor/jquery-3.7.1.min.js"></script> -->
+    <script src="./jquery.ripples.js"></script>
+
+<script src="vendor/bootstrap-5.3.6-dist/js/bootstrap.bundle.min.js"></script>
+<script src="vendor/gsap-public/minified/gsap.min.js"></script>
+<script src="vendor/gsap-public/minified/CSSRulePlugin.min.js"></script>
+<script src="vendor/gsap-public/minified/TextPlugin.min.js"></script>
+<script src="vendor/gsap-public/minified/SplitText.min.js"></script>
+<script src="vendor/gsap-public/minified/GSDevTools.min.js"></script>
+<script src="vendor/gsap-public/minified/DrawSVGPlugin.min.js"></script>
+<script src="app.js"></script>
+<script>
+    $(document).ready(function() {
+        try {
+            $('body').ripples({
+                resolution: 512,
+                dropRadius: 20, //px
+                perturbance: 0.04,
+            });
+            $('.fluid').ripples({
+                resolution: 512,
+                dropRadius: 20, //px
+                perturbance: 0.04,
+            });
+        }
+        catch (e) {
+            $('.error').show().text(e);
+        }
+    
+        $('.js-ripples-disable').on('click', function() {
+            $('body, main').ripples('destroy');
+            $(this).hide();
+        });
+    
+        $('.js-ripples-play').on('click', function() {
+            $('body, main').ripples('play');
+        });
+    
+        $('.js-ripples-pause').on('click', function() {
+            $('body, main').ripples('pause');
+        });
+    
+        // Automatic drops
+        setInterval(function() {
+            var $el = $('main');
+            var x = Math.random() * $el.outerWidth();
+            var y = Math.random() * $el.outerHeight();
+            var dropRadius = 20;
+            var strength = 0.04 + Math.random() * 0.04;
+    
+            $el.ripples('drop', x, y, dropRadius, strength);
+        }, 400);
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+.main{
+    width: 100vw;
+    height: 100vh;
+    background-color: #1d0803;
+    display: flex;
+}
+.fluid{
+    background-image: url('about.jpeg');
+    background-size: cover;
+    height: 400px;
+    width: 500px;
+}

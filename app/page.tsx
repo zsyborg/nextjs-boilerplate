@@ -4,6 +4,10 @@ import { useState, useRef, useEffect } from "react";
 import { TfiClose } from "react-icons/tfi";
 import SvgTag from './/components/SvgTag';
 import SvgGsap from "./components/SvgGsap";
+import $ from 'jquery';
+
+
+
 export default function Home() {
   
   const[isAbout, setisAbout] = useState(false)
@@ -11,7 +15,8 @@ export default function Home() {
   const[isServ, setisServ] = useState(false)
   const[ispro, setispro] = useState(false)
   const[isbra, setisbra] = useState(false)
-
+  
+  
   const toggleServices = () => {
     setisServ(!isServ);
     console.log('toggled')
@@ -233,8 +238,8 @@ export default function Home() {
       </div>
       {/* <p className="p-2 text-white boxline z-10" style={{backgroundColor:"var(--rough)"}}>Services</p> */}
     </div>
-    <div className="justify-center items-center grid" onClick={toggleAbout}>
-    <a href="#" >
+    <div className="justify-center items-center grid">
+    <a href="about.html">
       <div className="text-center flex flex-col items-center content-centertext-center">
     <p className="font-[family-name:var(--font-bodoni-moda)] gold" style={{fontSize:'14pt'}}>Est. 2000</p>
           <Image
@@ -242,6 +247,7 @@ export default function Home() {
            alt="MR Intl Logo"
             width={111}
             height={100}
+            className="mrlogo"
           />
 
         <p className="pale text-center font-[family-name:var(--font-bodoni-moda)] gold">
@@ -260,8 +266,8 @@ export default function Home() {
 {/* Large Screen */}
 
 <div className="grid largescreen grid-cols-2 lg:grid-cols-4 gap-1 xl:grid-cols-4 min-h-screen bodoni-moda-400">
-    <div className="justify-center items-center grid bg-slate-900" onClick={toggleAbout}>
-      <a href="#" >
+    <div className="justify-center items-center grid bg-slate-900">
+      <a href="/about.html" >
         <div className="text-center pale">
           <p className="font-[family-name:var(--font-bodoni-moda)] gold" style={{fontSize:'14pt'}}>Est. 2000</p>
           <Image
@@ -269,7 +275,7 @@ export default function Home() {
            alt="MR Intl Logo"
             width={222}
             height={100}
-        style={{objectPosition:'right'}}
+            style={{objectPosition:'right'}}
 
           />
 
