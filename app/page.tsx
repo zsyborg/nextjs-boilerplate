@@ -193,9 +193,9 @@ export default function Home() {
         loop
         muted
         playsInline
-        className="absolute vid top-0 left-0 w-full h-full object-cover"
+        className="absolute vid top-0 left-0 w-full h-full object-cover object-right"
         src="/brands.mp4"
-        style={{objectPosition:'-100px'}}
+        style={{objectPosition:'right'}}
       />
       <div className=" z-10 gold h-20 items-center content-center conbox">
         <p className="p-2 text-3xl" >
