@@ -186,7 +186,7 @@ export default function Home() {
 
     {/* Small Screen */}
     <div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 min-h-screen xl:hidden lg:hidden font-[family-name:var(--font-bodoni-moda)]">
-    <div className="justify-center items-end relative grid videocontainer" onClick={toggleBrand}>
+    <div className="justify-center h-full items-end relative grid videocontainer" onClick={toggleBrand}>
     <video
         ref={videoRef}
         autoPlay
@@ -204,7 +204,7 @@ export default function Home() {
       </div>
       {/* <p className="p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>Brands</p> */}
     </div>
-    <div className="justify-center items-end relative grid videocontainer " onClick={toggleProduct}>
+    <div className="justify-center h-full items-end relative grid videocontainer " onClick={toggleProduct}>
     <video
         ref={videoRef}
         autoPlay
@@ -221,7 +221,7 @@ export default function Home() {
       </div>
       {/* <p className="p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>Products</p> */}
     </div>
-    <div className="justify-center items-end grid relative videocontainer" onClick={toggleServices}>
+    <div className="justify-center h-full items-end grid relative videocontainer" onClick={toggleServices}>
     <video
         ref={videoRef}
         autoPlay
@@ -238,7 +238,7 @@ export default function Home() {
       </div>
       {/* <p className="p-2 text-white boxline z-10" style={{backgroundColor:"var(--rough)"}}>Services</p> */}
     </div>
-    <div className="justify-center items-center grid">
+    <div className="justify-center h-full relative items-center grid">
     <a href="about.html">
       <div className="text-center flex flex-col items-center content-centertext-center">
     <p className="font-[family-name:var(--font-bodoni-moda)] gold" style={{fontSize:'14pt'}}>Est. 2000</p>
