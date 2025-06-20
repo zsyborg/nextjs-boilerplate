@@ -193,7 +193,7 @@ export default function Home() {
         loop
         muted
         playsInline
-        className="absolute vid top-0 left-0 w-full h-full object-cover"
+        className="absolute vid top-0 left-0 w-full h-full object-cover object-right"
         src="/brands.mp4"
         style={{objectPosition:'right'}}
       />
@@ -300,7 +300,7 @@ export default function Home() {
         loop
         muted
         playsInline
-        className="absolute vid top-0 left-0 w-full h-full object-cover"
+        className="absolute vid top-0 left-0 w-full h-full object-right object-cover"
         src="/brands.mp4"
       />
     </div>
