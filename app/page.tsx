@@ -10,6 +10,8 @@ import $ from 'jquery';
 
 export default function Home() {
   
+  const videoRef = useRef<HTMLVideoElement>(null)
+  const introvideoRef = useRef<HTMLVideoElement>(null)
   const[isAbout, setisAbout] = useState(false)
   const [showVideo, setShowVideo] = useState(true);
   const[isServ, setisServ] = useState(false)
@@ -37,8 +39,6 @@ export default function Home() {
     console.log('toggled')
   }
 
-  const videoRef = useRef<HTMLVideoElement>(null)
-  const introvideoRef = useRef<HTMLVideoElement>(null)
 
 
 
@@ -185,7 +185,7 @@ export default function Home() {
     )} */}
 
     {/* Small Screen */}
-    <div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 min-h-screen xl:hidden lg:hidden font-[family-name:var(--font-bodoni-moda)]">
+    <div className="grid grid-cols-2 gap-1 lg:grid-cols-4 xl:grid-cols-4 min-h-screen xl:hidden lg:hidden font-[family-name:var(--font-bodoni-moda)]">
     <div className="justify-center h-full items-end relative grid videocontainer" onClick={toggleBrand}>
     <video
         ref={videoRef}
@@ -197,8 +197,8 @@ export default function Home() {
         src="/brands.mp4"
         style={{objectPosition:'right'}}
       />
-      <div className=" z-10 gold h-20 items-center content-center conbox">
-        <p className="p-2 text-3xl" >
+      <div className=" z-10 conbox h-14 items-center overflow-hidden content-center">
+        <p className="p-2 text-3xl w-screen" >
           Brands
         </p>
       </div>
@@ -214,8 +214,8 @@ export default function Home() {
         className="absolute vid top-0 left-0 w-full h-full object-cover"
         src="/products.mp4"
       />
-      <div className=" z-10 gold h-20 items-center content-center conbox">
-        <p className="p-2 text-3xl" >
+      <div className=" z-10 conbox h-14 items-center mobbox overflow-hidden content-center">
+        <p className="p-2 text-3xl w-screen" >
           Products
         </p>
       </div>
@@ -231,8 +231,8 @@ export default function Home() {
         className="absolute vid top-0 left-0 w-full h-full object-cover"
         src="/services.mp4"
       />
-      <div className=" z-10 gold h-20 items-center content-center conbox">
-        <p className="p-2 text-3xl" >
+      <div className=" z-10  h-14 box conbox overflow-hidden items-center content-center">
+        <p className="p-2 text-3xl w-screen" >
           Services
         </p>
       </div>
