@@ -640,7 +640,7 @@ svg.active .svg-elem-40 {
 .videocontainer:hover .conbox{
   /* background-color: #f7af6256; */
   background-color: transparent;
-  background-image: url('/g1.png');
+  background-image: url('/gold.png');
   background-size: cover;
   color: var(--rough);
   /* opacity: 0.5; */
