@@ -185,7 +185,7 @@ export default function Home() {
     )} */}
 
     {/* Small Screen */}
-    <div className="grid grid-cols-2 gap-1 lg:grid-cols-4 xl:grid-cols-4 min-h-screen xl:hidden lg:hidden font-[family-name:var(--font-bodoni-moda)]">
+    <div className="grid grid-cols-2 gap-1 lg:grid-cols-4 xl:grid-cols-4 min-h-screen xl:hidden lg:hidden ">
     <div className="justify-center h-full items-end relative grid videocontainer" onClick={toggleBrand}>
     <video
         ref={videoRef}
@@ -197,12 +197,13 @@ export default function Home() {
         src="/brands.mp4"
         style={{objectPosition:'right'}}
       />
-      <div className=" z-10 conbox h-14 items-center overflow-hidden content-center">
-        <p className="p-2 text-3xl w-screen" >
+      <div className=" z-10 conbox pl-4 h-14 items-center overflow-hidden content-center">
+        {/* <p className="text-2xl w-screen" style={{fontSize:'12pt'}}>
           Brands
-        </p>
+        </p> */}
+        <p style={{fontSize:'8pt'}}>Names we carry</p>
       </div>
-      {/* <p className="p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>Brands</p> */}
+      {/* <p className="text-white boxline" style={{backgroundColor:"var(--rough)"}}>Brands</p> */}
     </div>
     <div className="justify-center h-full items-end relative grid videocontainer " onClick={toggleProduct}>
     <video
@@ -214,12 +215,13 @@ export default function Home() {
         className="absolute vid top-0 left-0 w-full h-full object-cover"
         src="/products.mp4"
       />
-      <div className=" z-10 conbox h-14 items-center mobbox overflow-hidden content-center">
-        <p className="p-2 text-3xl w-screen" >
+      <div className=" z-10 conbox h-14 pl-4 items-center mobbox overflow-hidden content-center">
+      {/* <p className=" text-2xl w-screen" style={{fontSize:'12pt'}}>
+
           Products
-        </p>
+        </p> */}
+        <p style={{fontSize:'8pt'}}>Curated Works</p>
       </div>
-      {/* <p className="p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>Products</p> */}
     </div>
     <div className="justify-center h-full items-end grid relative videocontainer" onClick={toggleServices}>
     <video
@@ -231,17 +233,18 @@ export default function Home() {
         className="absolute vid top-0 left-0 w-full h-full object-cover"
         src="/services.mp4"
       />
-      <div className=" z-10  h-14 box conbox overflow-hidden items-center content-center">
-        <p className="p-2 text-3xl w-screen" >
+      <div className=" z-10  h-14 pl-4 box conbox overflow-hidden items-center content-center">
+      {/* <p className=" text-2xl w-screen" style={{fontSize:'12pt'}}>
+
           Services
-        </p>
+        </p> */}
+        <p style={{fontSize:'8pt'}}>Our Praxis</p>
       </div>
-      {/* <p className="p-2 text-white boxline z-10" style={{backgroundColor:"var(--rough)"}}>Services</p> */}
     </div>
     <div className="justify-center h-full relative items-center grid">
     <a href="about.html">
       <div className="text-center flex flex-col items-center content-centertext-center">
-    <p className="font-[family-name:var(--font-bodoni-moda)] gold" style={{fontSize:'14pt'}}>Est. 2000</p>
+    <p className=" gold" style={{fontSize:'14pt'}}>Est. 2000</p>
           <Image
            src="/newlogo.png"
            alt="MR Intl Logo"
@@ -250,26 +253,26 @@ export default function Home() {
             className="mrlogo"
           />
 
-        <p className="pale text-center font-[family-name:var(--font-bodoni-moda)] gold">
+        <p className="pale text-center  gold">
           A Spirit of Enterprise
           </p>
-          <p className="text-center pale font-[family-name:var(--font-bodoni-moda)] gold">An Obsession for Quality</p>
+          <p className="text-center pale  gold">An Obsession for Quality</p>
         </div>
     </a>
     </div>
 </div>
 
-
+{/* font-[family-name:var(--font-bodoni-moda)] */}
 
 
 
 {/* Large Screen */}
 
-<div className="grid largescreen grid-cols-2 lg:grid-cols-4 gap-1 xl:grid-cols-4 min-h-screen bodoni-moda-400">
+<div className="grid largescreen grid-cols-2 lg:grid-cols-4 gap-1 xl:grid-cols-4 min-h-screen ">
       <a href="/about.html" className="h-screen" >
     <div className="justify-center items-center content-center h-full grid bg-slate-900">
         <div className="text-center pale">
-          <p className="font-[family-name:var(--font-bodoni-moda)] gold" style={{fontSize:'14pt'}}>Est. 2000</p>
+          <p className=" gold" style={{fontSize:'14pt'}}>Est. 2000</p>
           <Image
            src="/newlogo.png"
            alt="MR Intl Logo"
@@ -280,18 +283,20 @@ export default function Home() {
           />
 
         </div>
-        <p className="pale text-center font-[family-name:var(--font-bodoni-moda)] gold">
+        <p className="pale text-center  gold">
           A Spirit of Enterprise
           </p>
-          <p className="text-center pale font-[family-name:var(--font-bodoni-moda)] gold">An Obsession for Quality</p>
+          <p className="text-center pale  gold">An Obsession for Quality</p>
       {/* <p className=" p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>About Us</p> */}
     </div>
       </a>
     <div className="justify-center relative videocontainer items-end grid overflow-clip" onClick={toggleBrand} >
-      <div className=" z-10 gold h-40 items-center content-center conbox" style={{ width:"477px"}}>
-        <p className="p-2 text-3xl" >
+      <div className=" z-10 gold h-30 items-center content-center conbox" style={{ width:"477px"}}>
+        {/* <p className="p-2 text-3xl" >
           Brands
-        </p>
+        </p> */}
+        <p className="pl-4" style={{fontSize:'24pt'}}>Names we carry</p>
+
       </div>
     <video
       
@@ -304,11 +309,13 @@ export default function Home() {
         src="/brands.mp4"
       />
     </div>
-    <div className="justify-center videocontainer relative items-end grid overflow-clip " onClick={toggleProduct} >
-    <div className=" z-10 w-100 gold h-40 items-center content-center conbox" style={{width:"477px"}}>
-      <p className="p-2 text-3xl">
+    <div className="justify-center videocontainer relative items-end grid overflow-clip font-fa" onClick={toggleProduct} >
+    <div className=" z-10 w-100 gold h-30 items-center content-center conbox" style={{width:"477px"}}>
+      {/* <p className="p-2 text-3xl">
         Products
-      </p>
+      </p> */}
+      <p className="pl-4" style={{fontSize:'24pt'}}>Curated Works</p>
+
       </div>
     <video
         ref={videoRef}
@@ -321,10 +328,12 @@ export default function Home() {
       />
     </div>
     <div className="justify-center items-end grid  relative videocontainer" onClick={toggleServices}>
-    <div className="z-10 w-100 gold h-40 items-center content-center conbox" style={{ width:"477px"}}>
-      <p className="p-2 text-3xl">
+    <div className="z-10 w-100 gold h-30 items-center content-center conbox" style={{ width:"477px"}}>
+      {/* <p className="p-2 text-3xl">
         Services
-      </p>
+      </p> */}
+      <p className="pl-4" style={{fontSize:'24pt'}}>Our Praxis</p>
+
       </div>
     <video
         ref={videoRef}
@@ -351,8 +360,8 @@ export default function Home() {
 {/* About Section */}
 
    {/* <SvgGsap/> */}
-
-<div className={isAbout ? 'min-h-screen min-w-screen zoom-fade-in absolute zoom-fade-in top-0 left-0 z-10 font-[family-name:var(--font-bodoni-moda)]' : 'transition-all scale-0 absolute top-0 left-0 duration-1000 opacity-0'} style={{backgroundColor:'#3E160C'}}>
+   {/*  */}
+<div className={isAbout ? 'min-h-screen min-w-screen zoom-fade-in absolute zoom-fade-in top-0 left-0 z-10 ' : 'transition-all scale-0 absolute top-0 left-0 duration-1000 opacity-0'} style={{backgroundColor:'#3E160C'}}>
   <div className="min-h-screen justify-center justify-items-center items-center grid content-center ">
     <a className="absolute top-0 right-0 z-10" onClick={toggleAbout} href="#">
 
@@ -380,7 +389,7 @@ export default function Home() {
 
 
 
-    <div className={isServ ? 'min-h-screen min-w-screen absolute top-0 left-0 zoom-fade-in z-10 font-[family-name:var(--font-bodoni-moda)]' : 'transition-all scale-0 absolute top-0 left-0 duration-1000 opacity-0'} style={{backgroundColor:'#3E160C'}}>
+    <div className={isServ ? 'min-h-screen min-w-screen absolute top-0 left-0 zoom-fade-in z-10 ' : 'transition-all scale-0 absolute top-0 left-0 duration-1000 opacity-0'} style={{backgroundColor:'#3E160C'}}>
       <div className="min-h-screen justify-center justify-items-center items-center grid content-center ">
         <a className="absolute top-0 right-0 z-10" onClick={toggleServices} href="#">
     
@@ -414,7 +423,7 @@ export default function Home() {
 
     
 
-    <div className={ispro ? 'min-h-screen min-w-screen absolute top-0 left-0 zoom-fade-in z-10 font-[family-name:var(--font-bodoni-moda)]' : 'transition-all scale-0 absolute top-0 left-0 duration-1000 opacity-0'} style={{backgroundColor:'#3E160C'}}>
+    <div className={ispro ? 'min-h-screen min-w-screen absolute top-0 left-0 zoom-fade-in z-10 ' : 'transition-all scale-0 absolute top-0 left-0 duration-1000 opacity-0'} style={{backgroundColor:'#3E160C'}}>
       <div className="min-h-screen justify-center justify-items-center items-center grid content-center ">
         <a className="absolute top-0 right-0 z-10" onClick={toggleProduct} href="#">
     
@@ -442,7 +451,7 @@ export default function Home() {
 
 
 
-    <div className={isbra ? 'min-h-screen min-w-screen absolute top-0 left-0 zoom-fade-in z-10 font-[family-name:var(--font-bodoni-moda)]' : 'transition-all scale-0 absolute top-0 left-0 duration-1000 opacity-0'} style={{backgroundColor:'#3E160C'}}>
+    <div className={isbra ? 'min-h-screen min-w-screen absolute top-0 left-0 zoom-fade-in z-10 ' : 'transition-all scale-0 absolute top-0 left-0 duration-1000 opacity-0'} style={{backgroundColor:'#3E160C'}}>
       <div className="min-h-screen justify-center justify-items-center items-center grid content-center ">
         <a className="absolute top-0 right-0 z-10" onClick={toggleBrand} href="#">
     

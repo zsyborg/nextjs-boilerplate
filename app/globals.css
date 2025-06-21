@@ -27,17 +27,39 @@
   }
 }
 
+
+@font-face {
+  font-family: 'Ambroise Regular';
+  src: url('/fonts/Ambroise Regular/Ambroise-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ambroise-Light';
+  src: url('/fonts/Ambroise Light Regular/Ambroise Light Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 body {
   background: var(--background);
   color: var(--foreground);
   /* overflow-y: hidden !important; */
-  font-family: "Bodoni Moda", serif;
+  font-family: "Ambroise-Light", serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
   height: 100vh;
 }
 
+
+.pirata{
+  font-family: "Pirata One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
 
 .gold {
   color: #F0E68C;

@@ -1,10 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Bodoni_Moda } from "next/font/google";
+import { Geist, Geist_Mono, Bodoni_Moda, Pirata_One } from "next/font/google";
 import "./globals.css";
 import $ from 'jquery';
 
 const bodoniModa = Bodoni_Moda({
   variable: '--font-bodoni-moda',
+  subsets: ['latin']
+})
+
+
+
+const pirataOne = Pirata_One({
+  variable: '--font-pirata-one',
+  weight:'400',
   subsets: ['latin']
 })
 
