@@ -1,3 +1,32 @@
+
+@font-face {
+    font-family: 'Ambroise Regular';
+    src: url('fonts/Ambroise Regular/Ambroise-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Ambroise-Light';
+    src: url('fonts/Ambroise Light Regular/Ambroise Light Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  body{
+    font-family: "Ambroise-Light", serif;
+    overflow: hidden;
+  }
+
+
+  .fa-xmark{
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    font-size: 22pt;
+  }
+
+
 .main{
     width: 100vw;
     height: 100vh;
@@ -10,3 +39,37 @@
     height: 400px;
     width: 500px;
 }
+
+.text-left{
+    text-align: left;
+}
+
+.text-center{
+    text-align: center;
+}
+.contentabt{
+    text-align: justify;
+}
+
+.servicebox{
+    border-top-left-radius: 34em;
+    border-top-right-radius: 34em;
+    border-bottom-left-radius: 34em;
+    border-bottom-right-radius: 34em;
+    overflow: hidden;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    height: 400px;
+    width: 400px;
+    /* background-image: url('ai/About\ Us.png');
+    background-size: cover; */
+}
+
+/* .vid{
+    object-fit: cover;
+    position: relative;
+    left: -10px;
+    height: 200px;
+} */

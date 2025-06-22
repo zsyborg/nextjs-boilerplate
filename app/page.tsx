@@ -241,8 +241,8 @@ export default function Home() {
         <p className="w-screen" style={{fontSize:'12pt'}}>Our Praxis</p>
       </div>
     </div>
-    <div className="justify-center h-full relative items-center grid">
     <a href="about.html">
+    <div className="justify-center h-full relative items-center grid">
       <div className="text-center flex flex-col items-center content-centertext-center">
     <p className=" gold" style={{fontSize:'14pt'}}>Est. 2000</p>
           <Image
@@ -258,8 +258,8 @@ export default function Home() {
           </p>
           <p className="text-center pale  gold">An Obsession for Quality</p>
         </div>
-    </a>
     </div>
+    </a>
 </div>
 
 {/* font-[family-name:var(--font-bodoni-moda)] */}
