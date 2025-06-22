@@ -2,8 +2,6 @@
 import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import { TfiClose } from "react-icons/tfi";
-import SvgTag from './components/SvgTag';
-import SvgGsap from "./components/SvgGsap";
 import $ from 'jquery';
 
 
