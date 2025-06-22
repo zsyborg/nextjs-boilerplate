@@ -54,8 +54,8 @@
 .servicebox{
     border-top-left-radius: 34em;
     border-top-right-radius: 34em;
-    border-bottom-left-radius: 34em;
-    border-bottom-right-radius: 34em;
+    /* border-bottom-left-radius: 34em;
+    border-bottom-right-radius: 34em; */
     overflow: hidden;
     display: grid;
     justify-content: center;
@@ -67,6 +67,14 @@
     background-size: cover; */
 }
 
+
+
+.gold {
+    color: #F0E68C;
+  }
+
+  
+  
 /* .vid{
     object-fit: cover;
     position: relative;
