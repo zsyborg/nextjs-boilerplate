@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MR International</title>
-    <link rel="stylesheet" href="vendor/bootstrap-5.3.6-dist/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="vendor/bootstrap-5.3.6-dist/css/bootstrap.min.css"> -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> 
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> -->
-    
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link
     rel="stylesheet"
     href="vendor/animate.min.css"
@@ -24,13 +24,13 @@
 <script src="https://kit.fontawesome.com/5d684a0673.js" crossorigin="anonymous"></script>
 
 </head>
-<body class="body" style="background-image: url('g1.jpg');">
+<body class="body bg-black">
 
     <div class="container-fluid justify-content-center align-items-center text-center text-white main">
         <a href="/" class="text-white">
             <i class="fa-solid fa-xmark"></i>
         </a>
-        <div class="row column-gap-4">
+        <div class="row grid grid-cols-4 align-middle justify-center justify-items-center content-center h-screen gap-4 column-gap-4">
             <div class="col text-left">
                 <div class="row">
                     <div class="servicebox">
@@ -41,7 +41,7 @@
                         muted
                         playsInline
                         className="vid"
-                        src="/exports.mp4"
+                        src="/export.mp4"
                         style="object-fit: fill; height: 100%; position: relative;"
                     ></video>
                     </div>
@@ -118,55 +118,14 @@
 
 
     <!-- <script src="vendor/jquery-3.7.1.min.js"></script> -->
-    <script src="./jquery.ripples.js"></script>
+    <!-- <script src="./jquery.ripples.js"></script> -->
 
 <script src="vendor/bootstrap-5.3.6-dist/js/bootstrap.bundle.min.js"></script>
 <script>
     $(document).ready(function() {
         
-        
         $(".owl-carousel").owlCarousel();
 
-
-        try {
-            $('body').ripples({
-                resolution: 512,
-                dropRadius: 20, //px
-                perturbance: 0.04,
-            });
-            $('.fluid').ripples({
-                resolution: 512,
-                dropRadius: 20, //px
-                perturbance: 0.04,
-            });
-        }
-        catch (e) {
-            $('.error').show().text(e);
-        }
-    
-        $('.js-ripples-disable').on('click', function() {
-            $('body, main').ripples('destroy');
-            $(this).hide();
-        });
-    
-        $('.js-ripples-play').on('click', function() {
-            $('body, main').ripples('play');
-        });
-    
-        $('.js-ripples-pause').on('click', function() {
-            $('body, main').ripples('pause');
-        });
-    
-        // Automatic drops
-        setInterval(function() {
-            var $el = $('main');
-            var x = Math.random() * $el.outerWidth();
-            var y = Math.random() * $el.outerHeight();
-            var dropRadius = 20;
-            var strength = 0.04 + Math.random() * 0.04;
-    
-            $el.ripples('drop', x, y, dropRadius, strength);
-        }, 400);
     });
     </script>
 </body>
