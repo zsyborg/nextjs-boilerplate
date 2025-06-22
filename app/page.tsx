@@ -222,7 +222,8 @@ export default function Home() {
         <p className="w-screen" style={{fontSize:'12pt'}}>Curated Works</p>
       </div>
     </div>
-    <div className="justify-center h-full items-end grid relative videocontainer" onClick={toggleServices}>
+    <a href="/services.html">
+    <div className="justify-center h-full items-end grid relative videocontainer" >
     <video
         ref={videoRef}
         autoPlay
@@ -240,6 +241,7 @@ export default function Home() {
         <p className="w-screen" style={{fontSize:'12pt'}}>Our Praxis</p>
       </div>
     </div>
+    </a>
     <a href="about.html">
     <div className="justify-center h-full relative items-center grid">
       <div className="text-center flex flex-col items-center content-centertext-center">
