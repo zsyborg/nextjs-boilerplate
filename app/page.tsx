@@ -197,11 +197,11 @@ export default function Home() {
         src="/brands.mp4"
         style={{objectPosition:'right'}}
       />
-      <div className=" z-10 conbox pl-4 h-14 items-center overflow-hidden content-center">
+      <div className=" z-10 conbox pl-1 w-full h-14 items-center overflow-hidden content-center">
         {/* <p className="text-2xl w-screen" style={{fontSize:'12pt'}}>
           Brands
         </p> */}
-        <p style={{fontSize:'8pt'}}>Names we carry</p>
+        <p className="w-screen" style={{fontSize:'12pt'}}>Names we carry</p>
       </div>
       {/* <p className="text-white boxline" style={{backgroundColor:"var(--rough)"}}>Brands</p> */}
     </div>
@@ -215,12 +215,12 @@ export default function Home() {
         className="absolute vid top-0 left-0 w-full h-full object-cover"
         src="/products.mp4"
       />
-      <div className=" z-10 conbox h-14 pl-4 items-center mobbox overflow-hidden content-center">
+      <div className=" z-10 conbox h-14 pl-1 items-center mobbox overflow-hidden content-center">
       {/* <p className=" text-2xl w-screen" style={{fontSize:'12pt'}}>
 
           Products
         </p> */}
-        <p style={{fontSize:'8pt'}}>Curated Works</p>
+        <p className="w-screen" style={{fontSize:'12pt'}}>Curated Works</p>
       </div>
     </div>
     <div className="justify-center h-full items-end grid relative videocontainer" onClick={toggleServices}>
@@ -238,7 +238,7 @@ export default function Home() {
 
           Services
         </p> */}
-        <p style={{fontSize:'8pt'}}>Our Praxis</p>
+        <p className="w-screen" style={{fontSize:'12pt'}}>Our Praxis</p>
       </div>
     </div>
     <div className="justify-center h-full relative items-center grid">

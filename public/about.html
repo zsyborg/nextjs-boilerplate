@@ -14,16 +14,35 @@
     href="vendor/animate.min.css"
     />
     <link rel="stylesheet" href="style.css">
-    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="vendor/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendor/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+
+<script src="vendor/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
 </head>
 <body class="body" style="background-image: url('g1.jpg');">
 
     <div class="container-fluid justify-content-center align-items-center text-center text-white main">
 
-        <div>
-            <h1>About Us</h1>
-            <div class="fluid">
-                
+        <div class="row">
+            <div class="col-6 text-left">
+                <h1 class="text-left">About Us</h1>
+                <p class="text-left">MR International lorem de dipsumde lorem lorem de dipsumde lorem lorem de dipsumde lorem lorem de dipsumde lorem lorem de dipsumde lorem lorem de dipsumde lorem lorem de dipsumde lorem lorem de dipsumde lorem lorem de dipsumde lorem lorem de dipsumde lorem lorem de dipsumde lorem lorem delorem de dipsumde lorem lorem de dipsumde lorem lorem de dipsumde lorem lorem de dipsumde lorem lorem de dipsumde lorem lorem de dipsumde lorem lorem de dipsumde lorem lorem de dipsumde lorem lorem de dipsumde lorem lorem de dipsumde lorem lorem de dipsumde lorem lorem delorem de dipsumde lorem lorem de dipsumde lorem lorem de dipsumde lorem lorem de dipsumde lorem lorem de dipsumde lorem lorem de dipsumde lorem lorem de dipsumde lorem lorem de dipsumde lorem lorem de dipsumde lorem lorem de dipsumde lorem lorem de dipsumde lorem lorem de dipsumde lorem lorem de dipsumde lorem lorem de dipsumde lorem lorem de dipsumde lorem lorem de dipsumde lorem </p>
+            </div>
+            <div class="col-6">
+
+            <!-- <div class="owl-carousel">
+                <div> Your Content </div>
+                <div> Your Content </div>
+                <div> Your Content </div>
+                <div> Your Content </div>
+                <div> Your Content </div>
+                <div> Your Content </div>
+                <div> Your Content </div>
+              </div> -->
+              <div class="fluid"></div>
             </div>
             <!-- <img src="about.jpeg" width="600" alt="About Us" class="fluid"/> -->
         </div>
@@ -31,13 +50,17 @@
     </div>
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <!-- <script src="vendor/jquery-3.7.1.min.js"></script> -->
     <script src="./jquery.ripples.js"></script>
 
 <script src="vendor/bootstrap-5.3.6-dist/js/bootstrap.bundle.min.js"></script>
 <script>
     $(document).ready(function() {
+        
+        
+        $(".owl-carousel").owlCarousel();
+
+
         try {
             $('body').ripples({
                 resolution: 512,
