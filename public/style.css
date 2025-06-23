@@ -1,3 +1,8 @@
+@theme{
+  --breakpoint-xs: 30rem;
+}
+
+
 :root {
     --white: #fff;
     --black: #323135;
@@ -7,6 +12,7 @@
     --midnight-green: #01565b;
     --yellow: #e5f33d;
     --timeline-gradient: rgba(206, 233, 228, 1) 0%, rgba(206, 233, 228, 1) 50%,
+
   rgba(206, 233, 228, 0) 100%;
 }
 
@@ -84,11 +90,12 @@ box-sizing: border-box;
     justify-content: center;
     justify-items: center;
     align-content: center;
-    height: 500px;
-    /* width: 400px; */
+    height: 360px;
+    width: 360px;
     /* background-image: url('ai/About\ Us.png');
     background-size: cover; */
 }
+
 
 
 
@@ -318,7 +325,32 @@ box-sizing: border-box;
     .timeline .info {
       display: none;
     }
+    
+      
+    .servicebox{
+      border-top-left-radius: 34em;
+      border-top-right-radius: 34em;
+      /* border-bottom-left-radius: 34em;
+      border-bottom-right-radius: 34em; */
+      overflow: hidden;
+      display: grid;
+      justify-content: center;
+      justify-items: center;
+      align-content: center;
+      height: 350px;
+      /* width: 400px; */
+      /* background-image: url('ai/About\ Us.png');
+      background-size: cover; */
   }
+
+  
+  .mobile{
+    display: none !important;
+  }
+
+
+}
+
   
   
   
@@ -336,13 +368,65 @@ box-sizing: border-box;
   .timeline{
     width: 400px;
     }    
+
+    
+    
+  .servicebox{
+    border-top-left-radius: 34em;
+    border-top-right-radius: 34em;
+    /* border-bottom-left-radius: 34em;
+    border-bottom-right-radius: 34em; */
+    overflow: hidden;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    height: 170px;
+    width: 170px;
+    /* background-image: url('ai/About\ Us.png');
+    background-size: cover; */
+}
+
+
+.desktop{
+  display: none;
+}
+
+.mobile{
+  display: grid !important;
+}
+
 }
   @media (min-width: 320px) and (max-width: 480px) {
     .timeline{
         width: 400px;
-    }    
+    }
+
+    .desktop{
+      display: none;
+    }
+    
+    
+    .mobile{
+      display: grid !important;
+    }
+    
+  .servicebox{
+      border-top-left-radius: 34em;
+      border-top-right-radius: 34em;
+      /* border-bottom-left-radius: 34em;
+      border-bottom-right-radius: 34em; */
+      overflow: hidden;
+      display: grid;
+      justify-content: center;
+      justify-items: center;
+      align-content: center;
+      height: 170px;
+      width: 170px;
+      /* background-image: url('ai/About\ Us.png');
+      background-size: cover; */
+  }
     
   }
-  
   
   

@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import { TfiClose } from "react-icons/tfi";
+import { useRouter } from "next/router";
 // import SvgGsap from "./components/SvgGsap";
 import $ from 'jquery';
 
@@ -16,11 +17,13 @@ export default function Home() {
   const[isServ, setisServ] = useState(false)
   const[ispro, setispro] = useState(false)
   const[isbra, setisbra] = useState(false)
-  
+  // const router = useRouter()
   
   const toggleServices = () => {
     setisServ(!isServ);
     console.log('toggled')
+    // window.document.URL('/services.html')
+    // router.push('/services.html');
   }
 
   const toggleAbout = () => {
@@ -184,8 +187,10 @@ export default function Home() {
     )} */}
 
     {/* Small Screen */}
+    
     <div className="grid grid-cols-2 gap-1 lg:grid-cols-4 xl:grid-cols-4 min-h-screen xl:hidden lg:hidden ">
-    <div className="justify-center h-full items-end relative grid videocontainer" onClick={toggleBrand}>
+    <a href="/brands.html">
+    <div className="justify-center h-full items-end relative grid videocontainer">
     <video
         ref={videoRef}
         autoPlay
@@ -204,24 +209,31 @@ export default function Home() {
       </div>
       {/* <p className="text-white boxline" style={{backgroundColor:"var(--rough)"}}>Brands</p> */}
     </div>
-    <div className="justify-center h-full items-end relative grid videocontainer " onClick={toggleProduct}>
-    <video
-        ref={videoRef}
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute vid top-0 left-0 w-full h-full object-cover"
-        src="/products.mp4"
-      />
-      <div className=" z-10 conbox h-14 pl-1 items-center mobbox overflow-hidden content-center">
-      {/* <p className=" text-2xl w-screen" style={{fontSize:'12pt'}}>
+    </a>
+    
+    
+    <a href="/services.html">
+      <div className="justify-center h-full items-end relative grid videocontainer " onClick={toggleProduct}>
+      <video
+          ref={videoRef}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute vid top-0 left-0 w-full h-full object-cover"
+          src="/products.mp4"
+        />
+        <div className=" z-10 conbox h-14 pl-1 items-center mobbox overflow-hidden content-center">
+        {/* <p className=" text-2xl w-screen" style={{fontSize:'12pt'}}>
 
-          Products
-        </p> */}
-        <p className="w-screen" style={{fontSize:'12pt'}}>Curated Works</p>
+            Products
+          </p> */}
+          <p className="w-screen" style={{fontSize:'12pt'}}>Curated Works</p>
+        </div>
       </div>
-    </div>
+    </a>
+
+
     <a href="/services.html">
     <div className="justify-center h-full items-end grid relative videocontainer" >
     <video
@@ -242,6 +254,10 @@ export default function Home() {
       </div>
     </div>
     </a>
+
+
+
+
     <a href="about.html">
     <div className="justify-center h-full relative items-center grid">
       <div className="text-center flex flex-col items-center content-centertext-center">
@@ -291,7 +307,8 @@ export default function Home() {
       {/* <p className=" p-2 text-white boxline" style={{backgroundColor:"var(--rough)"}}>About Us</p> */}
     </div>
       </a>
-    <div className="justify-center relative videocontainer items-end grid overflow-clip" onClick={toggleBrand} >
+      <a href="/brands.html" className="h-screen" >
+    <div className="justify-center relative videocontainer h-full items-end grid overflow-clip" >
       <div className=" z-10 gold h-30 items-center content-center conbox" style={{ width:"477px"}}>
         {/* <p className="p-2 text-3xl" >
           Brands
@@ -310,7 +327,11 @@ export default function Home() {
         src="/brands.mp4"
       />
     </div>
-    <div className="justify-center videocontainer relative items-end grid overflow-clip font-fa" onClick={toggleProduct} >
+  </a>
+
+  <a href="/products.html" className="h-screen" >
+
+    <div className="justify-center videocontainer h-full relative items-end grid overflow-clip font-fa"  >
     <div className=" z-10 w-100 gold h-30 items-center content-center conbox" style={{width:"477px"}}>
       {/* <p className="p-2 text-3xl">
         Products
@@ -328,7 +349,11 @@ export default function Home() {
         src="/products.mp4"
       />
     </div>
-    <div className="justify-center items-end grid  relative videocontainer" onClick={toggleServices}>
+    </a>
+
+    <a href="/services.html" className="h-screen" >
+
+    <div className="justify-center items-end grid h-full relative videocontainer">
     <div className="z-10 w-100 gold h-30 items-center content-center conbox" style={{ width:"477px"}}>
       {/* <p className="p-2 text-3xl">
         Services
@@ -346,6 +371,7 @@ export default function Home() {
         src="/services.mp4"
       />
     </div>
+    </a>
 </div>
 
 {/* <div className="min-h-screen min-w-screen grid items-center justify-center lg:hidden xl:hidden absolute top-0 left-0 z-10 ">
