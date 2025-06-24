@@ -416,7 +416,9 @@ h2.gold{
     }
 
     .abtbox{
-      padding: 3em;
+      /* padding: 3em; */
+      height:250px;
+      overflow:scroll;
     }
 
     .desktop{
