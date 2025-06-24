@@ -42,7 +42,7 @@ box-sizing: border-box;
 
   body{
     font-family: "Ambroise-Light", serif;
-    /* overflow: hidden; */
+    overflow: hidden;
     background-color: black;
   }
 
@@ -222,7 +222,7 @@ h2.gold{
   
   .timeline ol {
     font-size: 0;
-    padding: 250px 0;
+    padding: 220px 0;
     transition: all 1s;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
