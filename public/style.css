@@ -43,6 +43,7 @@ box-sizing: border-box;
   body{
     font-family: "Ambroise-Light", serif;
     /* overflow: hidden; */
+    background-color: black;
   }
 
 
@@ -59,6 +60,11 @@ box-sizing: border-box;
     height: 100vh;
     background-color: #1d0803;
     display: flex;
+}
+
+.abtbox{
+  display: flex;
+  flex-direction: column;
 }
 .fluid{
     background-image: url('about.jpeg');
@@ -96,7 +102,9 @@ box-sizing: border-box;
     background-size: cover; */
 }
 
-
+h2.gold{
+  font-size: 20pt;
+}
 
 
 .gold {
@@ -396,10 +404,19 @@ box-sizing: border-box;
   display: grid !important;
 }
 
+
+h2.gold{
+  font-size: 14pt;
+}
+
 }
   @media (min-width: 320px) and (max-width: 480px) {
     .timeline{
         width: 400px;
+    }
+
+    .abtbox{
+      padding: 3em;
     }
 
     .desktop{
@@ -426,7 +443,11 @@ box-sizing: border-box;
       /* background-image: url('ai/About\ Us.png');
       background-size: cover; */
   }
-    
+  
+  
+  h2.gold{
+    font-size: 14pt;
   }
+}
   
   
