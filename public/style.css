@@ -234,7 +234,7 @@ h2.gold{
     position: relative;
     display: inline-block;
     list-style-type: none;
-    width: 20px;
+    width: 25px;
     height: 5px;
     background: var(--pale);
     scroll-snap-align: start;
