@@ -42,7 +42,7 @@ box-sizing: border-box;
 
   body{
     font-family: "Ambroise-Light", serif;
-    /* overflow: hidden; */
+    overflow: hidden;
     background-color: black;
   }
 
@@ -152,7 +152,7 @@ h2.gold{
   .timeline {
     position: relative;
     white-space: nowrap;
-    max-width: 1400px;
+    max-width: 400px;
     padding: 0 10px;
     margin: 0 auto;
     display: grid;
@@ -224,7 +224,8 @@ h2.gold{
     font-size: 0;
     padding: 220px 0;
     transition: all 1s;
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
+    overflow: hidden;
     scroll-snap-type: x mandatory;
     scrollbar-color: var(--pale) var(--midnight-green);
   }
@@ -233,14 +234,14 @@ h2.gold{
     position: relative;
     display: inline-block;
     list-style-type: none;
-    width: 160px;
+    width: 20px;
     height: 5px;
     background: var(--pale);
     scroll-snap-align: start;
   }
   
   .timeline ol li:last-child {
-    width: 340px;
+    width: 10px;
   }
   
   .timeline ol li:not(:first-child) {
@@ -261,17 +262,23 @@ h2.gold{
     z-index: 1;
   }
   
+
+.timeline ol li:hover div{
+  visibility: visible;
+}
+
   .timeline ol li div {
     position: absolute;
     left: calc(100% + 7px);
-    width: 280px;
+    width: 180px;
+    visibility: hidden;
     padding: 15px;
     font-size: 1rem;
     white-space: normal;
     color: var(--pale);
     /* background: var(--white); */
-    border: 2px var(--pale)solid;
-    border-radius: 0 10px 10px 10px;
+    /* border: 2px var(--pale)solid;
+    border-radius: 0 10px 10px 10px; */
   }
   
   .timeline ol li div::before {
@@ -281,7 +288,7 @@ h2.gold{
     left: 0;
     width: 0;
     height: 0;
-    border-style: solid;
+    /* border-style: solid; */
   }
   
   .timeline ol li:nth-child(odd) div {
@@ -291,9 +298,9 @@ h2.gold{
   }
   
   .timeline ol li:nth-child(odd) div::before {
-    top: 100%;
-    border-width: 8px 8px 0 0;
-    border-color: var(--white) transparent transparent transparent;
+    /* top: 100%; */
+    /* border-width: 8px 8px 0 0; */
+    /* border-color: var(--white) transparent transparent transparent; */
   }
   
   .timeline ol li:nth-child(even) div {
